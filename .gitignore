@@ -1,8 +1,12 @@
+node_modules/
+_site/
+.cache/
+
 # Figma export leftovers — not web assets
 canvas.fig
 meta.json
 thumbnail.png
 .index.bak.html
+.CNAME.hold
 .DS_Store
 .claude/
-.CNAME.hold

@@ -1,0 +1,16 @@
+{
+  "name": "The Human Company",
+  "url": "https://thehumancompany.media",
+  "tagline": "From insight to impact.",
+  "email": "hello@thehumancompany.media",
+  "blurb": "A full-stack digital content and brand solutions company. Home of Humans of Bombay.",
+  "nav": [
+    { "t": "The Company",      "u": "/company/" },
+    { "t": "What We Do",       "u": "/what-we-do/" },
+    { "t": "Original IPs",     "u": "/original-ips/" },
+    { "t": "Our Work",         "u": "/work/" },
+    { "t": "Humans of Bombay", "u": "/humans-of-bombay/" },
+    { "t": "Impact",           "u": "/impact/" },
+    { "t": "The Team",         "u": "/team/" }
+  ]
+}

@@ -1,0 +1,121 @@
+---
+layout: base.njk
+permalink: /work/
+crumb: Our Work
+title: "Our Work — Campaigns, Content Ecosystems & Original Formats"
+ogTitle: "Our Work — Ideas Are Only as Good as What They Do"
+description: "Campaigns, content ecosystems and original formats built across industries and audiences for brands including AWS, Samsung, HSBC, Myntra, Zomato, Aditya Birla Group, Flipkart, HUL, Pidilite, Sun Pharma, Fractal and Kotak."
+ctaTitle: "Have a brief <em>worth solving?</em>"
+ctaBody: "Whether it's a single campaign or an entire content ecosystem, tell us the problem and we'll tell you what the idea needs to be."
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Our Work</span>
+    <h1 class="reveal d1">Ideas are only as good as <em>what they do.</em></h1>
+    <p class="lead reveal d2">We've built campaigns, content ecosystems and original formats across industries and audiences — bringing strategy, creative, production and distribution together to help brands move from being seen to being remembered.</p>
+  </div>
+</section>
+
+<section class="sec beliefs">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="reveal">How the work <em>breaks down.</em></h2>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal"><span class="pn">01</span><h3>Brand storytelling</h3><p>Turning brand messages into stories people actually want to watch.</p></article>
+      <article class="pillar reveal d1"><span class="pn">02</span><h3>Original IP</h3><p>Creating repeatable formats that build audiences beyond a single campaign.</p></article>
+      <article class="pillar reveal d2"><span class="pn">03</span><h3>Social-first</h3><p>Designing for the way people actually consume, share and talk about content.</p></article>
+      <article class="pillar reveal"><span class="pn">04</span><h3>Culture</h3><p>Finding the moments, conversations and human truths that make brands relevant.</p></article>
+      <article class="pillar reveal d1"><span class="pn">05</span><h3>Distribution</h3><p>Pairing strong ideas with the audiences and platforms that can make them travel.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Selected work</span>
+      <h2 class="reveal d1">Case studies.</h2>
+      <p class="lead reveal d2">Each project below will carry the brand, the brief, what we built, the work itself and what it moved.</p>
+    </div>
+
+    <div class="chips reveal" aria-hidden="true">
+      <span class="chip on">All</span>
+      <span class="chip">Campaigns</span>
+      <span class="chip">Original IP</span>
+      <span class="chip">Social</span>
+      <span class="chip">Film</span>
+      <span class="chip">Podcasts</span>
+    </div>
+
+    <div class="shows">
+      <article class="show reveal">
+        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        <span class="tag">Campaign</span>
+        <h3>Project name</h3>
+        <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
+      </article>
+      <article class="show reveal d1">
+        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        <span class="tag">Original IP</span>
+        <h3>Project name</h3>
+        <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
+      </article>
+      <article class="show reveal d2">
+        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        <span class="tag">Social</span>
+        <h3>Project name</h3>
+        <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
+      </article>
+      <article class="show reveal">
+        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        <span class="tag">Film</span>
+        <h3>Project name</h3>
+        <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
+      </article>
+      <article class="show reveal d1">
+        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        <span class="tag">Podcast</span>
+        <h3>Project name</h3>
+        <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
+      </article>
+      <article class="show reveal d2">
+        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        <span class="tag">Campaign</span>
+        <h3>Project name</h3>
+        <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec beliefs" id="brands">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Brands</span>
+      <h2 class="reveal d1">Trusted by brands that want to <em>matter.</em></h2>
+      <p class="lead reveal d2">The Human Company works with some of the world's leading organisations to build stories, content and ideas that connect with people.</p>
+    </div>
+
+    <div class="logos reveal">
+      {%- for b in brands %}
+      <div class="logo-cell">{% if b.file %}<img src="{{ ("/assets/logos/" + b.file) | url }}" alt="{{ b.name }}" loading="lazy" width="150" height="46" />{% else %}{{ b.name }}{% endif %}</div>
+      {%- endfor %}
+    </div>
+    <p class="logo-note reveal">And many more.</p>
+  </div>
+</section>
+
+<section class="sec next-wrap">
+  <div class="wrap">
+    <div class="next" style="border-top:0;margin-top:0;padding-top:0">
+      <h2 class="reveal">Keep reading</h2>
+      <div class="next-grid">
+        <a class="next-card reveal" href="{{ "/what-we-do/" | url }}"><h3>What We Do</h3><p>The capabilities behind every project here.</p><span class="arw">Read more →</span></a>
+        <a class="next-card reveal d1" href="{{ "/original-ips/" | url }}"><h3>Original IPs</h3><p>The formats we built and run ourselves.</p><span class="arw">Read more →</span></a>
+        <a class="next-card reveal d2" href="{{ "/impact/" | url }}"><h3>Impact</h3><p>What happened after people watched.</p><span class="arw">Read more →</span></a>
+      </div>
+    </div>
+  </div>
+</section>

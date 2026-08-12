@@ -1,0 +1,174 @@
+{% from "mark.njk" import mark %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ description }}" />
+<title>{{ title }}</title>
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<meta name="theme-color" content="#F4EEE3" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)" />
+{% if noindex %}<meta name="robots" content="noindex,follow" />{% else %}<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />{% endif %}
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:title" content="{{ ogTitle or title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:image" content="{{ site.url }}/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Human Company — we know people, we know culture, we know how ideas travel." />
+<meta property="og:locale" content="en_IN" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ ogTitle or title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:image" content="{{ site.url }}/assets/og.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{{ "/assets/style.css" | url }}" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#org",
+      "name": "The Human Company",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/og.png",
+      "slogan": "From insight to impact.",
+      "description": "A full-stack digital content and brand solutions company bringing strategy, creative, production, original IPs and distribution under one roof.",
+      "email": "{{ site.email }}",
+      "foundingDate": "2014",
+      "founder": { "@id": "{{ site.url }}/#karishma" },
+      "subOrganization": {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#hob",
+        "name": "Humans of Bombay",
+        "url": "{{ site.url }}/humans-of-bombay/",
+        "foundingDate": "2014",
+        "description": "Storytelling platform founded in 2014; the flagship platform within The Human Company.",
+        "founder": { "@id": "{{ site.url }}/#karishma" },
+        "parentOrganization": { "@id": "{{ site.url }}/#org" }
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#karishma",
+      "name": "Karishma Mehta",
+      "jobTitle": "Founder & CEO",
+      "worksFor": { "@id": "{{ site.url }}/#org" },
+      "description": "Founder & CEO of The Human Company and founder of Humans of Bombay. TEDx speaker, author and Forbes-featured entrepreneur."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "The Human Company",
+      "publisher": { "@id": "{{ site.url }}/#org" },
+      "inLanguage": "en"
+    }{% if page.url != "/" %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "{{ crumb or title }}", "item": "{{ site.url }}{{ page.url }}" }
+      ]
+    }{% endif %}{% if schema %},
+    {{ schema | safe }}{% endif %}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="{{ "/" | url }}" aria-label="The Human Company home">
+      <span class="mark">{{ mark("nav") }}</span>
+      <span class="wordmark">The<br/>Human<br/>Company</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      {%- for n in site.nav %}
+      <a href="{{ n.u | url }}"{% if page.url == n.u %} aria-current="page"{% endif %}>{{ n.t }}</a>
+      {%- endfor %}
+    </nav>
+    <a class="nav-cta" href="mailto:{{ site.email }}">Get in touch</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" onclick="const l=document.querySelector('nav.links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<main id="main">
+{% if page.url != "/" %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="{{ "/" | url }}">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ crumb or title }}</span>
+  </div>
+</nav>
+{% endif %}
+{{ content | safe }}
+
+<section class="cta-wrap" id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="mark ghost beat">{{ mark("cta") }}</span>
+      <div class="inner">
+        <span class="eyebrow">Get in touch</span>
+        <h2>{{ ctaTitle | safe or "Have an idea <em>worth building?</em>" }}</h2>
+        <p>{{ ctaBody or "A brand problem. A story worth telling. A format worth creating. A conversation worth starting. Let's build it." }}</p>
+        <a class="btn btn-primary" href="mailto:{{ site.email }}">Get in touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="mark">{{ mark("foot") }}</span>
+        <div class="tag">{{ site.tagline }}</div>
+        <p>{{ site.blurb }}</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Company</h5>
+          {%- for n in site.nav %}
+          <a href="{{ n.u | url }}">{{ n.t }}</a>
+          {%- endfor %}
+        </div>
+        <div class="foot-col">
+          <h5>Connect</h5>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+          <a href="mailto:{{ site.email }}">Get In Touch</a>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <a href="{{ "/privacy/" | url }}">Privacy Policy</a>
+          <a href="{{ "/terms/" | url }}">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> {{ site.name }}.</span>
+      <span>{{ site.tagline }}</span>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ "/assets/main.js" | url }}"></script>
+</body>
+</html>
