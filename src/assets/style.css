@@ -424,3 +424,8 @@
   .next-card h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.2rem;letter-spacing:-.01em}
   .next-card p{margin-top:10px;color:var(--ink-soft);font-size:.92rem}
   .next-card .arw{display:inline-block;margin-top:16px;color:var(--accent-ui);font-weight:500;font-size:.9rem}
+
+  /* ---------- REAL IMAGERY ---------- */
+  .portrait{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}
+  .hob-logo{height:clamp(30px,4vw,42px);width:auto;margin-bottom:22px}
+  .founder .portrait{align-self:start}

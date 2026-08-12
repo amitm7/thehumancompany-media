@@ -53,6 +53,7 @@
         "url": "{{ site.url }}/humans-of-bombay/",
         "foundingDate": "2014",
         "description": "Storytelling platform founded in 2014; the flagship platform within The Human Company.",
+        "sameAs": [{% for x in site.hob.social %}"{{ x.u }}"{% if not loop.last %}, {% endif %}{% endfor %}],
         "founder": { "@id": "{{ site.url }}/#karishma" },
         "parentOrganization": { "@id": "{{ site.url }}/#org" }
       }
@@ -149,10 +150,10 @@
           {%- endfor %}
         </div>
         <div class="foot-col">
-          <h5>Connect</h5>
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">YouTube</a>
+          <h5>Humans of Bombay</h5>
+          {%- for x in site.hob.social %}
+          <a href="{{ x.u }}" rel="noopener">{{ x.t }}</a>
+          {%- endfor %}
           <a href="mailto:{{ site.email }}">Get In Touch</a>
         </div>
         <div class="foot-col">

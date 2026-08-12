@@ -5,12 +5,54 @@
   "email": "hello@thehumancompany.media",
   "blurb": "A full-stack digital content and brand solutions company. Home of Humans of Bombay.",
   "nav": [
-    { "t": "The Company",      "u": "/company/" },
-    { "t": "What We Do",       "u": "/what-we-do/" },
-    { "t": "Original IPs",     "u": "/original-ips/" },
-    { "t": "Our Work",         "u": "/work/" },
-    { "t": "Humans of Bombay", "u": "/humans-of-bombay/" },
-    { "t": "Impact",           "u": "/impact/" },
-    { "t": "The Team",         "u": "/team/" }
-  ]
+    {
+      "t": "The Company",
+      "u": "/company/"
+    },
+    {
+      "t": "What We Do",
+      "u": "/what-we-do/"
+    },
+    {
+      "t": "Original IPs",
+      "u": "/original-ips/"
+    },
+    {
+      "t": "Our Work",
+      "u": "/work/"
+    },
+    {
+      "t": "Humans of Bombay",
+      "u": "/humans-of-bombay/"
+    },
+    {
+      "t": "Impact",
+      "u": "/impact/"
+    },
+    {
+      "t": "The Team",
+      "u": "/team/"
+    }
+  ],
+  "hob": {
+    "url": "https://humansofbombay.in/",
+    "social": [
+      {
+        "t": "Instagram",
+        "u": "https://www.instagram.com/officialhumansofbombay"
+      },
+      {
+        "t": "YouTube",
+        "u": "https://www.youtube.com/@humansofbombay2801"
+      },
+      {
+        "t": "LinkedIn",
+        "u": "https://www.linkedin.com/company/humans-of-bombay/"
+      },
+      {
+        "t": "Facebook",
+        "u": "https://www.facebook.com/humansofbombay"
+      }
+    ]
+  }
 }

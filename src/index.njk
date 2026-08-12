@@ -344,7 +344,7 @@ description: "The Human Company is a full-stack digital content and brand soluti
     </div>
 
     <div class="founder">
-      <div class="ph tall reveal" aria-hidden="true"><b>Founder<br/>portrait<br/>4:5</b></div>
+      <img class="portrait reveal" src="{{ "/assets/img/karishma.jpg" | url }}" alt="Karishma Mehta, Founder and CEO of The Human Company" width="720" height="900" />
       <div class="reveal d1">
         <h3>Karishma Mehta</h3>
         <div class="role">Founder &amp; CEO, The Human Company</div>
@@ -406,10 +406,10 @@ description: "The Human Company is a full-stack digital content and brand soluti
     </div>
 
     <div class="social-links reveal">
-      <a href="#" rel="noopener">Instagram <span aria-hidden="true">→</span></a>
-      <a href="#" rel="noopener">LinkedIn <span aria-hidden="true">→</span></a>
-      <a href="#" rel="noopener">YouTube <span aria-hidden="true">→</span></a>
-      <a href="#" rel="noopener">Humans of Bombay <span aria-hidden="true">→</span></a>
+      {%- for x in site.hob.social %}
+      <a href="{{ x.u }}" rel="noopener">{{ x.t }} <span aria-hidden="true">→</span></a>
+      {%- endfor %}
+      <a href="{{ site.hob.url }}" rel="noopener">humansofbombay.in <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
