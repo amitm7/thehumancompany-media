@@ -1,62 +1,74 @@
 [
   {
     "name": "AWS",
-    "file": "",
-    "domain": "aws.amazon.com"
+    "file": "aws.svg",
+    "domain": "aws.amazon.com",
+    "licence": "Public domain"
   },
   {
     "name": "Aditya Birla Group",
-    "file": "",
-    "domain": "adityabirla.com"
+    "file": "aditya-birla-group.png",
+    "domain": "adityabirla.com",
+    "licence": "Fair use"
   },
   {
     "name": "Samsung",
-    "file": "",
-    "domain": "samsung.com"
+    "file": "samsung.svg",
+    "domain": "samsung.com",
+    "licence": "Public domain"
   },
   {
     "name": "Myntra",
-    "file": "",
-    "domain": "myntra.com"
+    "file": "myntra.png",
+    "domain": "myntra.com",
+    "licence": "CC BY-SA 4.0"
   },
   {
     "name": "Flipkart",
-    "file": "",
-    "domain": "flipkart.com"
+    "file": "flipkart.svg",
+    "domain": "flipkart.com",
+    "licence": "Public domain"
   },
   {
     "name": "HUL",
-    "file": "",
-    "domain": "hul.co.in"
+    "file": "hul.svg",
+    "domain": "hul.co.in",
+    "licence": "Fair use"
   },
   {
     "name": "HSBC",
-    "file": "",
-    "domain": "hsbc.com"
+    "file": "hsbc.svg",
+    "domain": "hsbc.com",
+    "licence": "Public domain"
   },
   {
     "name": "Pidilite",
-    "file": "",
-    "domain": "pidilite.com"
+    "file": "pidilite.svg",
+    "domain": "pidilite.com",
+    "licence": "Fair use"
   },
   {
     "name": "Sun Pharma",
-    "file": "",
-    "domain": "sunpharma.com"
+    "file": "sun-pharma.svg",
+    "domain": "sunpharma.com",
+    "licence": "Fair use"
   },
   {
     "name": "Fractal",
-    "file": "",
-    "domain": "fractal.ai"
+    "file": "fractal.png",
+    "domain": "fractal.ai",
+    "licence": "Public domain"
   },
   {
     "name": "Kotak",
-    "file": "",
-    "domain": "kotak.com"
+    "file": "kotak.svg",
+    "domain": "kotak.com",
+    "licence": "Fair use"
   },
   {
     "name": "Zomato",
-    "file": "",
-    "domain": "zomato.com"
+    "file": "zomato.png",
+    "domain": "zomato.com",
+    "licence": "Public domain"
   }
 ]

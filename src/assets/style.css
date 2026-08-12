@@ -234,7 +234,8 @@
   }
   .logo-cell:hover{background:var(--paper-2);color:var(--ink)}
   .logo-cell img{max-width:100%;width:auto;height:auto;max-height:44px;object-fit:contain;
-    filter:grayscale(1) opacity(.62);transition:filter .3s}
+    /* light marks (Flipkart, Sun Pharma) vanish under plain opacity — darken first */
+    filter:grayscale(1) brightness(.72) contrast(1.25) opacity(.85);transition:filter .35s}
   .logo-cell:hover img{filter:none}
   .logo-note{margin-top:22px;font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
 
