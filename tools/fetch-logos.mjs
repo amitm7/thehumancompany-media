@@ -32,10 +32,21 @@ const brands = JSON.parse(fs.readFileSync(BRANDS, "utf8"));
 
 // The wall sits on cream (#F4EEE3) and is tinted dark by CSS, so prefer a full
 // wordmark over a bare icon, and a light-background variant over a dark one.
+//
+// Deliberately NOT preferring SVG: this API sometimes returns a scraped DOM
+// fragment wrapped in <svg><foreignObject>, which renders completely blank.
+// Raster is boring and actually works. Any SVG still gets validated below.
 const score = (l) =>
   (l.type === "logo" ? 4 : 0) +
-  (l.mode === "light" || l.mode === "has_opaque_background" ? 2 : 0) +
-  (/\.svg($|\?)/i.test(l.url) ? 3 : 0);
+  (l.mode === "light" || l.mode === "has_opaque_background" ? 3 : 0) +
+  Math.min((l.resolution?.width ?? 0) / 500, 2);
+
+// A real logo SVG draws shapes. A scraped one embeds HTML and paints nothing.
+const svgIsReal = (buf) => {
+  const s = buf.toString("utf8", 0, 4000);
+  if (/<foreignObject/i.test(s)) return false;
+  return /<(path|polygon|circle|rect|ellipse|g|use|image)\b/i.test(s);
+};
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
@@ -51,19 +62,34 @@ for (const b of brands) {
     });
     if (!res.ok) { failed.push(`${b.name} (HTTP ${res.status})`); continue; }
 
-    const logos = (await res.json())?.logos ?? [];
-    const best = logos.slice().sort((a, c) => score(c) - score(a))[0];
-    if (!best?.url) { failed.push(`${b.name} (no logo in response)`); continue; }
+    const logos = ((await res.json())?.brand?.logos ?? [])
+      .slice()
+      .sort((a, c) => score(c) - score(a));
+    if (!logos.length) { failed.push(`${b.name} (no logo in response)`); continue; }
 
-    const img = await fetch(best.url);
-    if (!img.ok) { failed.push(`${b.name} (download ${img.status})`); continue; }
+    // walk candidates best-first until one actually downloads and renders
+    let saved = null;
+    for (const cand of logos) {
+      if (!cand.url) continue;
+      const img = await fetch(cand.url);
+      if (!img.ok) continue;
+      const buf = Buffer.from(await img.arrayBuffer());
+      const ext = (cand.url.match(/\.(svg|png|webp|jpe?g)(?=$|\?)/i)?.[1] ?? "png").toLowerCase();
+      if (ext === "svg" && !svgIsReal(buf)) {
+        console.log(`  ~ ${b.name}: skipped a blank scraped SVG`);
+        continue;
+      }
+      const file = `${slug(b.name)}.${ext}`;
+      fs.writeFileSync(path.join(OUT, file), buf);
+      saved = { file, cand };
+      break;
+    }
+    if (!saved) { failed.push(`${b.name} (no usable logo variant)`); continue; }
 
-    const ext = (best.url.match(/\.(svg|png|webp|jpe?g)(?=$|\?)/i)?.[1] ?? "png").toLowerCase();
-    const file = `${slug(b.name)}.${ext}`;
-    fs.writeFileSync(path.join(OUT, file), Buffer.from(await img.arrayBuffer()));
-    b.file = file;
+    b.file = saved.file;
     ok++;
-    console.log(`  ${b.name} -> ${file} (${best.type}/${best.mode})`);
+    if (saved.cand.mode === "dark") console.log(`  ! ${b.name}: white logo — will be invisible on cream, needs manual swap`);
+    console.log(`  ${b.name} -> ${saved.file} (${saved.cand.type}/${saved.cand.mode})`);
   } catch (e) {
     failed.push(`${b.name} (${e.message})`);
   }
