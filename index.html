@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="The Human Company — a house of ventures built on a single belief: the best products, stories, and technology are the ones that make people feel seen. Parent company of Humans of Bombay." />
+<title>The Human Company — A House of Ventures Built Around People</title>
+<link rel="canonical" href="https://thehumancompany.media/" />
+<meta name="theme-color" content="#F4EEE3" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Human Company" />
+<meta property="og:url" content="https://thehumancompany.media/" />
+<meta property="og:title" content="The Human Company — A House of Ventures Built Around People" />
+<meta property="og:description" content="A house of ventures held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen." />
+<meta property="og:image" content="https://thehumancompany.media/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Human Company — everything we build begins with a human." />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Human Company — A House of Ventures Built Around People" />
+<meta name="twitter:description" content="A house of ventures held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen." />
+<meta name="twitter:image" content="https://thehumancompany.media/og.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4EEE3;
+    --paper-2:#EEE6D7;
+    --paper-3:#E7DDCB;
+    --ink:#1A1512;
+    --ink-soft:#5A5047;
+    --ink-faint:#665D52;
+    --line:#DCCFB9;
+    --night:#171310;
+    --night-soft:#B9AE9C;
+    --accent:#E4513A;
+    --accent-deep:#C43C2C;
+    --accent-ui:#C43C2C;   /* small text + white-on-accent: 5.21:1 */
+    --maxw:1280px;
+    --pad:clamp(20px,5vw,64px);
+    --r:18px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:clamp(15px,1.05vw,17px);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:3px solid var(--accent-deep);outline-offset:3px;border-radius:4px}
+  .skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--ink);color:#fff;
+    padding:12px 20px;border-radius:0 0 8px 0;font-weight:600}
+  .skip:focus{left:0}
+  ::selection{background:var(--accent);color:#fff}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  .serif{font-family:"Fraunces",Georgia,serif;font-weight:400;letter-spacing:-.01em}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+    font-weight:600;color:var(--ink-faint);
+  }
+  .accent{color:var(--accent)}
+
+  /* ---------- MARK ---------- */
+  .mark{display:inline-block;color:var(--ink);width:auto;height:1em}
+  .mark svg{height:100%;width:auto;display:block;overflow:visible}
+  .beat{transform-origin:50% 55%;animation:beat 3.4s ease-in-out infinite}
+  @keyframes beat{
+    0%,58%,100%{transform:scale(1)}
+    64%{transform:scale(1.045)}
+    70%{transform:scale(.99)}
+    76%{transform:scale(1.03)}
+    82%{transform:scale(1)}
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    transition:background .4s ease,box-shadow .4s ease,padding .4s ease;
+    padding:22px 0;
+  }
+  header.nav.solid{
+    background:rgba(244,238,227,.82);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    box-shadow:0 1px 0 var(--line);
+    padding:14px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand .mark{height:34px}
+  .brand .wordmark{
+    font-size:.74rem;letter-spacing:.22em;font-weight:600;line-height:1.25;
+    text-transform:uppercase;padding-left:14px;border-left:1px solid var(--line);
+  }
+  nav.links{display:flex;align-items:center;gap:34px}
+  nav.links a{font-size:.86rem;color:var(--ink-soft);position:relative;transition:color .25s}
+  nav.links a::after{
+    content:"";position:absolute;left:0;bottom:-5px;height:1px;width:0;background:var(--ink);
+    transition:width .3s ease;
+  }
+  nav.links a:hover{color:var(--ink)}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{
+    font-size:.82rem;font-weight:500;color:var(--ink);
+    border:1px solid var(--ink);border-radius:100px;padding:9px 20px;
+    transition:background .3s,color .3s;
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--paper)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:120px;padding-bottom:64px;overflow:hidden}
+  .hero-ghost{
+    position:absolute;right:-6vw;top:50%;transform:translateY(-50%);
+    color:var(--paper-3);height:min(96vh,860px);z-index:0;pointer-events:none;
+    opacity:.9;
+  }
+  .hero .wrap{position:relative;z-index:2}
+  .hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+  .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2.6s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+  h1.hero-title{
+    font-family:"Fraunces",Georgia,serif;font-weight:400;
+    font-size:clamp(2.9rem,7vw,6.6rem);line-height:.98;letter-spacing:-.025em;
+    max-width:16ch;
+  }
+  h1.hero-title em{font-style:italic;color:var(--accent)}
+  .hero-sub{
+    margin-top:34px;max-width:52ch;font-size:clamp(1.05rem,1.5vw,1.28rem);
+    color:var(--ink-soft);line-height:1.55;
+  }
+  .hero-actions{margin-top:44px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:.95rem;
+    padding:15px 26px;border-radius:100px;transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s,color .3s,box-shadow .3s;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(228,81,58,.6)}
+  .btn-ghost{color:var(--ink)}
+  .btn-ghost .arw{transition:transform .3s}
+  .btn-ghost:hover .arw{transform:translateX(5px)}
+  .btn-ghost:hover{color:var(--accent)}
+  .scroll-cue{
+    position:absolute;left:var(--pad);bottom:30px;z-index:2;display:flex;align-items:center;gap:12px;
+    font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);
+  }
+  .scroll-cue .bar{width:44px;height:1px;background:var(--ink-faint);position:relative;overflow:hidden}
+  .scroll-cue .bar::after{content:"";position:absolute;inset:0;background:var(--ink);transform:translateX(-100%);animation:slide 2.4s ease-in-out infinite}
+  @keyframes slide{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:22px 0;overflow:hidden;white-space:nowrap;background:var(--paper);
+  }
+  .marquee-track{display:inline-flex;gap:0;animation:marq 34s linear infinite;will-change:transform}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee span{
+    font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.4rem,3.4vw,2.4rem);
+    color:var(--ink);padding:0 34px;display:inline-flex;align-items:center;gap:34px;
+  }
+  .marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
+  @keyframes marq{to{transform:translateX(-50%)}}
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{position:relative}
+  .sec{padding:clamp(80px,12vw,160px) 0}
+  .sec-head{max-width:60ch}
+  .sec-num{font-size:.74rem;letter-spacing:.24em;color:var(--ink-faint);font-weight:600;margin-bottom:20px;display:block}
+  h2{
+    font-family:"Fraunces",serif;font-weight:400;letter-spacing:-.02em;
+    font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.02;
+  }
+  h2 em{font-style:italic;color:var(--accent)}
+  .lead{margin-top:24px;font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--ink-soft);max-width:56ch}
+
+  /* ---------- MANIFESTO (night) ---------- */
+  .manifesto{background:var(--night);color:var(--paper)}
+  .manifesto .eyebrow{color:var(--night-soft)}
+  .manifesto .big{
+    font-family:"Fraunces",serif;font-weight:300;letter-spacing:-.02em;
+    font-size:clamp(1.9rem,4.8vw,4rem);line-height:1.08;max-width:20ch;margin-top:34px;
+  }
+  .manifesto .big em{font-style:italic;color:var(--accent)}
+  .manifesto p.body{margin-top:34px;max-width:54ch;color:var(--night-soft);font-size:clamp(1rem,1.4vw,1.18rem)}
+  .manifesto .rule{height:1px;background:rgba(255,255,255,.14);margin:56px 0;width:100%}
+  .m-stats{display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,90px)}
+  .m-stat .k{font-family:"Fraunces",serif;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1}
+  .m-stat .v{margin-top:10px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--night-soft)}
+
+  /* ---------- PILLARS ---------- */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,28px);margin-top:64px}
+  .pillar{
+    border-top:1px solid var(--line);padding-top:28px;position:relative;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .pillar:hover{transform:translateY(-6px)}
+  .pillar .pn{font-family:"Fraunces",serif;font-size:1rem;color:var(--accent-ui)}
+  .pillar h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.4rem,2.2vw,1.9rem);letter-spacing:-.01em;margin-top:18px;line-height:1.08}
+  .pillar p{margin-top:16px;color:var(--ink-soft);font-size:.98rem}
+  .pillar .ic{margin-top:26px;color:var(--ink)}
+  .pillar .ic svg{width:34px;height:34px}
+
+  /* ---------- APPROACH ---------- */
+  .approach{background:var(--paper-2)}
+  .two{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,7vw,110px);align-items:start}
+  .principles{margin-top:8px}
+  .principle{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .principle:first-child{border-top:1px solid var(--line)}
+  .principle .idx{font-family:"Fraunces",serif;font-size:.95rem;color:var(--accent-ui);min-width:38px}
+  .principle h4{font-family:"Fraunces",serif;font-weight:500;font-size:1.28rem;letter-spacing:-.01em}
+  .principle p{margin-top:8px;color:var(--ink-soft);font-size:.96rem;max-width:44ch}
+  .approach .stick{position:sticky;top:120px}
+  .tagline{
+    font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.5rem,2.6vw,2.1rem);
+    line-height:1.2;margin-top:30px;
+  }
+  .tagline .accent{font-style:normal}
+
+  /* ---------- BANNER QUOTE ---------- */
+  .banner{padding:clamp(90px,14vw,180px) 0;text-align:center}
+  .banner .q{
+    font-family:"Fraunces",serif;font-weight:300;letter-spacing:-.02em;
+    font-size:clamp(2.1rem,6vw,5rem);line-height:1.02;max-width:16ch;margin:0 auto;
+  }
+  .banner .q em{font-style:italic;color:var(--accent)}
+  .banner .sub{margin-top:28px;color:var(--ink-soft);letter-spacing:.04em}
+
+  /* ---------- CAREERS / CTA ---------- */
+  .cta{background:var(--night);color:var(--paper);border-radius:clamp(20px,3vw,34px);padding:clamp(46px,7vw,92px);position:relative;overflow:hidden}
+  .cta-wrap{padding-bottom:clamp(80px,12vw,140px)}
+  .cta .ghost{position:absolute;right:-3%;bottom:-24%;color:rgba(255,255,255,.045);height:130%;pointer-events:none}
+  .cta .inner{position:relative;z-index:2;max-width:30ch}
+  .cta .eyebrow{color:var(--night-soft)}
+  .cta h2{margin-top:22px}
+  .cta p{margin-top:24px;color:var(--night-soft);max-width:46ch;font-size:1.08rem}
+  .cta .btn-primary{background:var(--paper);color:var(--ink);margin-top:38px}
+  .cta .btn-primary:hover{background:var(--accent-deep);color:#fff}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:72px 0 40px;border-top:1px solid var(--line)}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:56px}
+  .foot-brand .mark{height:40px;color:var(--ink)}
+  .foot-brand p{margin-top:22px;max-width:34ch;color:var(--ink-soft);font-size:.95rem}
+  .foot-cols{display:flex;gap:clamp(40px,7vw,96px);flex-wrap:wrap}
+  .foot-col h5{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px}
+  .foot-col a{display:block;color:var(--ink-soft);font-size:.95rem;padding:6px 0;transition:color .25s}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:30px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:.82rem}
+
+  /* ---------- ESSAY ---------- */
+  .essay{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);margin-top:60px}
+  .essay p{color:var(--ink-soft);font-size:clamp(1.02rem,1.3vw,1.15rem);margin-bottom:22px;line-height:1.62}
+  .essay p.first{color:var(--ink)}
+  .dropcap::first-letter{font-family:"Fraunces",serif;font-size:3.6em;line-height:.72;float:left;padding:10px 14px 0 0;color:var(--accent);font-weight:500}
+  .kicker-facts{display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px);margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+  .kf .k{font-family:"Fraunces",serif;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.05;max-width:16ch}
+  .kf .v{margin-top:12px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+
+  /* ---------- BELIEFS ---------- */
+  .beliefs{background:var(--paper-2)}
+  .belief-list{margin-top:60px;border-top:1px solid var(--line)}
+  .belief{display:grid;grid-template-columns:70px 1fr;gap:22px;padding:34px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding-left .4s ease}
+  .belief:hover{padding-left:10px}
+  .belief .bn{font-family:"Fraunces",serif;color:var(--accent-ui);font-size:1.1rem}
+  .belief .bt{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.35rem,2.5vw,2rem);letter-spacing:-.01em;line-height:1.12}
+  .belief .bd{color:var(--ink-soft);margin-top:12px;font-size:1rem;max-width:62ch;line-height:1.6}
+  @media(max-width:560px){.belief{grid-template-columns:1fr;gap:8px}}
+
+  /* ---------- LETTER ---------- */
+  .letter-sec{padding:clamp(80px,12vw,150px) 0}
+  .letter{max-width:66ch;margin:0 auto}
+  .letter p{font-family:"Fraunces",serif;font-size:clamp(1.3rem,2.3vw,1.85rem);line-height:1.4;color:var(--ink);font-weight:300;margin-top:26px;letter-spacing:-.01em}
+  .letter p em{font-style:italic;color:var(--accent)}
+  .letter .sign{margin-top:38px;font-size:.86rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .pillars{grid-template-columns:1fr;gap:8px}
+    .pillar{padding-top:22px;padding-bottom:22px}
+    .two{grid-template-columns:1fr;gap:40px}
+    .approach .stick{position:static}
+    nav.links,.nav-cta{display:none}
+    .burger{display:flex}
+    .hero-ghost{opacity:.5;right:-30vw}
+  }
+  @media(max-width:560px){
+    .foot-top{flex-direction:column}
+    .hero{min-height:auto;padding-top:140px}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thehumancompany.media/#org",
+      "name": "The Human Company",
+      "alternateName": "The Human Company — A House of Ventures",
+      "url": "https://thehumancompany.media/",
+      "logo": "https://thehumancompany.media/og.png",
+      "description": "A house of ventures held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen.",
+      "email": "hello@thehumancompany.media",
+      "subOrganization": {
+        "@type": "Organization",
+        "name": "Humans of Bombay",
+        "description": "Storytelling venture of The Human Company.",
+        "parentOrganization": { "@id": "https://thehumancompany.media/#org" }
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thehumancompany.media/#website",
+      "url": "https://thehumancompany.media/",
+      "name": "The Human Company",
+      "publisher": { "@id": "https://thehumancompany.media/#org" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="The Human Company home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 120 140" role="img">
+          <defs>
+            <mask id="hc-heart-nav">
+              <rect width="120" height="140" fill="#fff"/>
+              <path d="M60 40 C54 31 41 32 41 44 C41 53 53 60 60 66 C67 60 79 53 79 44 C79 32 66 31 60 40 Z" fill="#000"/>
+            </mask>
+          </defs>
+          <g mask="url(#hc-heart-nav)" fill="currentColor">
+            <rect x="12" y="6" width="44" height="128" rx="22"/>
+            <rect x="64" y="6" width="44" height="128" rx="22"/>
+          </g>
+        </svg>
+      </span>
+      <span class="wordmark">The<br/>Human<br/>Company</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#company">The Company</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#build">What We Build</a>
+      <a href="#approach">Approach</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ================= HERO ================= -->
+<main id="main">
+<section class="hero">
+  <span class="mark hero-ghost beat" aria-hidden="true">
+    <svg viewBox="0 0 120 140">
+      <defs>
+        <mask id="hc-heart-hero">
+          <rect width="120" height="140" fill="#fff"/>
+          <path d="M60 40 C54 31 41 32 41 44 C41 53 53 60 60 66 C67 60 79 53 79 44 C79 32 66 31 60 40 Z" fill="#000"/>
+        </mask>
+      </defs>
+      <g mask="url(#hc-heart-hero)" fill="currentColor">
+        <rect x="12" y="6" width="44" height="128" rx="22"/>
+        <rect x="64" y="6" width="44" height="128" rx="22"/>
+      </g>
+    </svg>
+  </span>
+  <div class="wrap">
+    <div class="hero-eyebrow reveal">
+      <span class="dot"></span>
+      <span class="eyebrow">The Human Company — A House of Ventures</span>
+    </div>
+    <h1 class="hero-title reveal d1">Everything we build begins with a <em>human.</em></h1>
+    <p class="hero-sub reveal d2">We are a company of companies, held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen.</p>
+    <div class="hero-actions reveal d3">
+      <a class="btn btn-primary" href="#philosophy">Our philosophy</a>
+      <a class="btn btn-ghost" href="#build">What we build <span class="arw">→</span></a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span class="bar"></span> Scroll</div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Stories</span><span>People</span><span>Craft</span><span>Empathy</span><span>Technology</span><span>Belonging</span>
+    <span>Stories</span><span>People</span><span>Craft</span><span>Empathy</span><span>Technology</span><span>Belonging</span>
+  </div>
+</div>
+
+<!-- ================= COMPANY ================= -->
+<section class="sec" id="company">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">01 — The Company</span>
+      <h2 class="reveal d1">Most companies are built around a product. We build ours around <em>a person.</em></h2>
+      <p class="lead reveal d2">The Human Company is a parent to ventures that reach people at scale without ever treating them as a number. Different products, different audiences, one throughline — put the human at the centre and let everything else follow.</p>
+    </div>
+
+    <div class="essay">
+      <div class="reveal">
+        <p class="first dropcap">The word "human" gets used a lot, and meant very rarely. It has become the thing brands say when they want the warmth of the idea without the work of it. We started this company because we were tired of that gap — the distance between how companies talk about people and how they actually treat them. We wanted to close it, not decorate it.</p>
+        <p>So we built a house rather than a single product. Under one roof sit ventures that look nothing alike on the surface: some tell stories, some build tools, some gather communities. What they share is a discipline. Each one has to earn a person's trust the slow, honest way — by being genuinely useful, genuinely well-made, and genuinely on their side.</p>
+      </div>
+      <div class="reveal d1">
+        <p>We are not interested in attention for its own sake. Attention is cheap; you can buy it by the thousand. Meaning is the hard part — the reason someone comes back, tells a friend, feels a little less alone. That is the only metric that has ever mattered to us, and every venture we back is measured against it before anything else.</p>
+        <p>This site keeps the specifics abstract on purpose. Ventures come and go, scale and pivot, are born and outgrow us. The belief underneath them does not move. If you understand the belief, you understand the company — and everything we will ever make.</p>
+      </div>
+    </div>
+
+    <div class="kicker-facts">
+      <div class="kf reveal"><div class="k">A house of ventures</div><div class="v">Not a single product</div></div>
+      <div class="kf reveal d1"><div class="k">Measured by meaning</div><div class="v">Before reach or revenue</div></div>
+      <div class="kf reveal d2"><div class="k">People at the centre</div><div class="v">Every decision, every venture</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MANIFESTO ================= -->
+<section class="sec manifesto" id="philosophy">
+  <div class="wrap">
+    <span class="eyebrow reveal">02 — Philosophy</span>
+    <p class="big reveal d1">We believe the most advanced technology on earth is <em>a human being</em> — and everything we make should honour that.</p>
+    <p class="body reveal d2">Attention is easy to buy and impossible to keep unless something true is on the other side of it. So we start with the person: what they feel, what they carry, what they'd be proud to be part of. The reach, the numbers, the growth — those are consequences of getting the human right, not the goal.</p>
+    <div class="rule reveal"></div>
+    <div class="m-stats">
+      <div class="m-stat reveal d1"><div class="k">Millions</div><div class="v">Reached, one human at a time</div></div>
+      <div class="m-stat reveal d2"><div class="k">One belief</div><div class="v">People first, always</div></div>
+      <div class="m-stat reveal d3"><div class="k">A house</div><div class="v">Of ventures, not silos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUILD / PILLARS ================= -->
+<section class="sec" id="build">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">03 — What We Build</span>
+      <h2 class="reveal d1">Three ways of putting people <em>first.</em></h2>
+      <p class="lead reveal d2">Our ventures take different shapes, but each one is an answer to the same question: how do we make a person feel more seen tomorrow than they did today?</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pn">01</div>
+        <h3>Stories that move</h3>
+        <p>Narrative that reaches millions yet lands on one. We tell human stories with the craft they deserve and the reach they've earned.</p>
+        <div class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5h16v11H8l-4 4z"/></svg>
+        </div>
+      </article>
+      <article class="pillar reveal d1">
+        <div class="pn">02</div>
+        <h3>Products with a pulse</h3>
+        <p>Technology that behaves like it cares. We design tools that feel considered, warm, and quietly on your side.</p>
+        <div class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>
+        </div>
+      </article>
+      <article class="pillar reveal d2">
+        <div class="pn">03</div>
+        <h3>Communities, not audiences</h3>
+        <p>Places people belong, not crowds people perform for. We build spaces where connection outlasts the scroll.</p>
+        <div class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M13 20c0-3 2.5-5 5-5"/></svg>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BELIEFS ================= -->
+<section class="sec beliefs" id="beliefs">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">04 — What We Believe</span>
+      <h2 class="reveal d1">Six things we hold to be <em>true.</em></h2>
+      <p class="lead reveal d2">Not a mission statement to be framed and forgotten — a working set of beliefs we actually build against. When a decision is hard, these are what we return to.</p>
+    </div>
+    <div class="belief-list">
+      <div class="belief reveal">
+        <span class="bn">01</span>
+        <div>
+          <div class="bt">A person is not a metric.</div>
+          <p class="bd">The people on the other side of what we build are not impressions, sessions, or line items. Treat them like the whole human they are, and the numbers take care of themselves.</p>
+        </div>
+      </div>
+      <div class="belief reveal">
+        <span class="bn">02</span>
+        <div>
+          <div class="bt">Attention is borrowed. Trust is earned.</div>
+          <p class="bd">You can buy a person's attention for a moment. Their trust has to be built slowly, kept carefully, and never spent on something unworthy of it.</p>
+        </div>
+      </div>
+      <div class="belief reveal">
+        <span class="bn">03</span>
+        <div>
+          <div class="bt">Craft is a form of respect.</div>
+          <p class="bd">The care we put into the details is the clearest thing we can say about how much we value the person using them. People can always tell when you did the work.</p>
+        </div>
+      </div>
+      <div class="belief reveal">
+        <span class="bn">04</span>
+        <div>
+          <div class="bt">Scale should carry something true.</div>
+          <p class="bd">Reaching millions is only worth it if what travels is honest. We would rather move one person deeply than reach a thousand and mean nothing.</p>
+        </div>
+      </div>
+      <div class="belief reveal">
+        <span class="bn">05</span>
+        <div>
+          <div class="bt">Warmth and rigour are not opposites.</div>
+          <p class="bd">The most caring products are also the most carefully engineered. Kindness at scale is a hard technical problem, and we treat it like one.</p>
+        </div>
+      </div>
+      <div class="belief reveal">
+        <span class="bn">06</span>
+        <div>
+          <div class="bt">Build for the long, human game.</div>
+          <p class="bd">Trends expire. Being genuinely useful and genuinely kind does not. We make things designed to still matter when the noise has moved on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPROACH ================= -->
+<section class="sec approach" id="approach">
+  <div class="wrap two">
+    <div class="stick">
+      <span class="sec-num reveal">05 — Approach</span>
+      <h2 class="reveal d1">Human-centered isn't a method. It's the <em>whole point.</em></h2>
+      <p class="lead reveal d2">We hold every venture to the same standard, whether it's a platform for millions or a tool for one. Speed matters. Craft matters more. And nothing ships until it feels human.</p>
+      <p class="tagline reveal d3">Engineered to outrun. <span class="accent">Designed to stay human.</span></p>
+    </div>
+    <div class="principles">
+      <div class="principle reveal">
+        <span class="idx">01</span>
+        <div><h4>Start with the person</h4><p>Before the feature, the funnel, or the format — the human. Everything is designed backwards from how it should make them feel.</p></div>
+      </div>
+      <div class="principle reveal d1">
+        <span class="idx">02</span>
+        <div><h4>Craft is non-negotiable</h4><p>Detail is a form of respect. We sweat the type, the timing, the tone, because people can tell when you did.</p></div>
+      </div>
+      <div class="principle reveal d2">
+        <span class="idx">03</span>
+        <div><h4>Reach with meaning</h4><p>Scale is only worth having if what travels is true. We'd rather move millions than merely reach them.</p></div>
+      </div>
+      <div class="principle reveal d3">
+        <span class="idx">04</span>
+        <div><h4>Build to last</h4><p>Trends fade; being genuinely useful and genuinely kind doesn't. We build for the long, human game.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BANNER QUOTE ================= -->
+<section class="banner">
+  <div class="wrap">
+    <p class="q reveal">Reach millions. <em>Move one.</em></p>
+    <p class="sub reveal d1">That's the whole company, in three words.</p>
+  </div>
+</section>
+
+<!-- ================= LETTER ================= -->
+<section class="letter-sec" id="note">
+  <div class="wrap letter">
+    <span class="eyebrow reveal">A note on why we exist</span>
+    <p class="reveal d1">Technology keeps getting better at reaching people and, somehow, worse at seeing them. Feeds grow longer. Attention grows thinner. And the person — the actual, specific, feeling human — quietly disappears into a chart.</p>
+    <p class="reveal d1">We started The Human Company to build in the other direction. To make things where the person is the point, not the product of it. Where <em>being seen</em> is the feature, and everything else is in service of it.</p>
+    <p class="reveal d1">If that sounds like the kind of thing you'd want to build, or be reached by — we'd love to hear from you.</p>
+    <div class="sign reveal d2">— The Human Company</div>
+  </div>
+</section>
+
+<!-- ================= CTA / CAREERS ================= -->
+<section class="cta-wrap" id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="mark ghost beat" aria-hidden="true">
+        <svg viewBox="0 0 120 140">
+          <defs>
+            <mask id="hc-heart-cta">
+              <rect width="120" height="140" fill="#fff"/>
+              <path d="M60 40 C54 31 41 32 41 44 C41 53 53 60 60 66 C67 60 79 53 79 44 C79 32 66 31 60 40 Z" fill="#000"/>
+            </mask>
+          </defs>
+          <g mask="url(#hc-heart-cta)" fill="currentColor">
+            <rect x="12" y="6" width="44" height="128" rx="22"/>
+            <rect x="64" y="6" width="44" height="128" rx="22"/>
+          </g>
+        </svg>
+      </span>
+      <div class="inner">
+        <span class="eyebrow">Come build human things</span>
+        <h2>Let's make something that makes people <em>feel seen.</em></h2>
+        <p>Whether you want to partner, join us, or just start a conversation — we're always listening for people who care about the human on the other side.</p>
+        <a class="btn btn-primary" href="mailto:hello@thehumancompany.media">Say hello →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 120 140">
+            <defs>
+              <mask id="hc-heart-foot">
+                <rect width="120" height="140" fill="#fff"/>
+                <path d="M60 40 C54 31 41 32 41 44 C41 53 53 60 60 66 C67 60 79 53 79 44 C79 32 66 31 60 40 Z" fill="#000"/>
+              </mask>
+            </defs>
+            <g mask="url(#hc-heart-foot)" fill="currentColor">
+              <rect x="12" y="6" width="44" height="128" rx="22"/>
+              <rect x="64" y="6" width="44" height="128" rx="22"/>
+            </g>
+          </svg>
+        </span>
+        <p>A house of ventures built on a single belief: the best things we make are the ones that make people feel seen.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="#company">The Company</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#build">What We Build</a>
+          <a href="#approach">Approach</a>
+        </div>
+        <div class="foot-col">
+          <h5>Connect</h5>
+          <a href="mailto:hello@thehumancompany.media">Email us</a>
+          <a href="#contact">Careers</a>
+          <a href="#contact">Partnerships</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> The Human Company. Made with care.</span>
+      <span>Human-centered, always.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // nav solidify
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // scroll reveals
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

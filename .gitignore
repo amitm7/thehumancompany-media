@@ -1,0 +1,7 @@
+# Figma export leftovers — not web assets
+canvas.fig
+meta.json
+thumbnail.png
+.index.bak.html
+.DS_Store
+.claude/
