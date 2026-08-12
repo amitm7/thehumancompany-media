@@ -10,3 +10,6 @@ thumbnail.png
 .CNAME.hold
 .DS_Store
 .claude/
+
+# secrets — never commit
+.env

@@ -1,14 +1,62 @@
 [
-  { "name": "AWS",                "file": "" },
-  { "name": "Aditya Birla Group", "file": "" },
-  { "name": "Samsung",            "file": "" },
-  { "name": "Myntra",             "file": "" },
-  { "name": "Flipkart",           "file": "" },
-  { "name": "HUL",                "file": "" },
-  { "name": "HSBC",               "file": "" },
-  { "name": "Pidilite",           "file": "" },
-  { "name": "Sun Pharma",         "file": "" },
-  { "name": "Fractal",            "file": "" },
-  { "name": "Kotak",              "file": "" },
-  { "name": "Zomato",             "file": "" }
+  {
+    "name": "AWS",
+    "file": "",
+    "domain": "aws.amazon.com"
+  },
+  {
+    "name": "Aditya Birla Group",
+    "file": "",
+    "domain": "adityabirla.com"
+  },
+  {
+    "name": "Samsung",
+    "file": "",
+    "domain": "samsung.com"
+  },
+  {
+    "name": "Myntra",
+    "file": "",
+    "domain": "myntra.com"
+  },
+  {
+    "name": "Flipkart",
+    "file": "",
+    "domain": "flipkart.com"
+  },
+  {
+    "name": "HUL",
+    "file": "",
+    "domain": "hul.co.in"
+  },
+  {
+    "name": "HSBC",
+    "file": "",
+    "domain": "hsbc.com"
+  },
+  {
+    "name": "Pidilite",
+    "file": "",
+    "domain": "pidilite.com"
+  },
+  {
+    "name": "Sun Pharma",
+    "file": "",
+    "domain": "sunpharma.com"
+  },
+  {
+    "name": "Fractal",
+    "file": "",
+    "domain": "fractal.ai"
+  },
+  {
+    "name": "Kotak",
+    "file": "",
+    "domain": "kotak.com"
+  },
+  {
+    "name": "Zomato",
+    "file": "",
+    "domain": "zomato.com"
+  }
 ]

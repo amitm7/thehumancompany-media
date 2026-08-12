@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "logos": "node tools/fetch-logos.mjs"
   },
   "repository": {
     "type": "git",
