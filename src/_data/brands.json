@@ -7,9 +7,10 @@
   },
   {
     "name": "Aditya Birla Group",
-    "file": "aditya-birla-group.png",
+    "file": "",
     "domain": "adityabirla.com",
-    "licence": "Fair use"
+    "licence": "Fair use",
+    "blocked": "fair-use licence: needs written permission before display"
   },
   {
     "name": "Samsung",
@@ -31,9 +32,10 @@
   },
   {
     "name": "HUL",
-    "file": "hul.svg",
+    "file": "",
     "domain": "hul.co.in",
-    "licence": "Fair use"
+    "licence": "Fair use",
+    "blocked": "fair-use licence: needs written permission before display"
   },
   {
     "name": "HSBC",
@@ -43,15 +45,17 @@
   },
   {
     "name": "Pidilite",
-    "file": "pidilite.svg",
+    "file": "",
     "domain": "pidilite.com",
-    "licence": "Fair use"
+    "licence": "Fair use",
+    "blocked": "fair-use licence: needs written permission before display"
   },
   {
     "name": "Sun Pharma",
-    "file": "sun-pharma.svg",
+    "file": "",
     "domain": "sunpharma.com",
-    "licence": "Fair use"
+    "licence": "Fair use",
+    "blocked": "fair-use licence: needs written permission before display"
   },
   {
     "name": "Fractal",
@@ -61,9 +65,10 @@
   },
   {
     "name": "Kotak",
-    "file": "kotak.svg",
+    "file": "",
     "domain": "kotak.com",
-    "licence": "Fair use"
+    "licence": "Fair use",
+    "blocked": "fair-use licence: needs written permission before display"
   },
   {
     "name": "Zomato",
