@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="The Human Company — a house of ventures built on a single belief: the best products, stories, and technology are the ones that make people feel seen. Parent company of Humans of Bombay." />
-<title>The Human Company — A House of Ventures Built Around People</title>
+<meta name="description" content="The Human Company is a full-stack digital content and brand solutions company — strategy, creative, production, original IPs and distribution under one roof. 12 years, 7,000+ stories, 7M+ community. Parent company of Humans of Bombay." />
+<title>The Human Company — Full-Stack Digital Content &amp; Brand Solutions</title>
 <link rel="canonical" href="https://thehumancompany.media/" />
 <meta name="theme-color" content="#F4EEE3" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)" />
@@ -14,18 +14,18 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Human Company" />
 <meta property="og:url" content="https://thehumancompany.media/" />
-<meta property="og:title" content="The Human Company — A House of Ventures Built Around People" />
-<meta property="og:description" content="A house of ventures held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen." />
+<meta property="og:title" content="The Human Company — From Insight to Impact" />
+<meta property="og:description" content="For 12 years we've told stories people stop for, share and remember. Strategy, creative, production, original IPs and distribution — under one roof." />
 <meta property="og:image" content="https://thehumancompany.media/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="The Human Company — everything we build begins with a human." />
+<meta property="og:image:alt" content="The Human Company — we know people, we know culture, we know how ideas travel." />
 <meta property="og:locale" content="en_IN" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Human Company — A House of Ventures Built Around People" />
-<meta name="twitter:description" content="A house of ventures held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen." />
+<meta name="twitter:title" content="The Human Company — From Insight to Impact" />
+<meta name="twitter:description" content="For 12 years we've told stories people stop for, share and remember. Strategy, creative, production, original IPs and distribution — under one roof." />
 <meta name="twitter:image" content="https://thehumancompany.media/og.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,14 +51,13 @@
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   body{
     background:var(--paper);
     color:var(--ink);
     font-family:"Inter",system-ui,sans-serif;
     font-size:clamp(15px,1.05vw,17px);
     line-height:1.6;
-    overflow-x:hidden;
   }
   a{color:inherit;text-decoration:none}
   :focus-visible{outline:3px solid var(--accent-deep);outline-offset:3px;border-radius:4px}
@@ -95,7 +94,7 @@
     padding:22px 0;
   }
   header.nav.solid{
-    background:rgba(244,238,227,.82);
+    background:rgba(244,238,227,.9);
     backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
     box-shadow:0 1px 0 var(--line);
     padding:14px 0;
@@ -107,8 +106,8 @@
     font-size:.74rem;letter-spacing:.22em;font-weight:600;line-height:1.25;
     text-transform:uppercase;padding-left:14px;border-left:1px solid var(--line);
   }
-  nav.links{display:flex;align-items:center;gap:34px}
-  nav.links a{font-size:.86rem;color:var(--ink-soft);position:relative;transition:color .25s}
+  nav.links{display:flex;align-items:center;gap:26px}
+  nav.links a{font-size:.82rem;color:var(--ink-soft);position:relative;transition:color .25s;white-space:nowrap}
   nav.links a::after{
     content:"";position:absolute;left:0;bottom:-5px;height:1px;width:0;background:var(--ink);
     transition:width .3s ease;
@@ -118,7 +117,7 @@
   .nav-cta{
     font-size:.82rem;font-weight:500;color:var(--ink);
     border:1px solid var(--ink);border-radius:100px;padding:9px 20px;
-    transition:background .3s,color .3s;
+    transition:background .3s,color .3s;white-space:nowrap;
   }
   .nav-cta:hover{background:var(--ink);color:var(--paper)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
@@ -137,25 +136,26 @@
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
   h1.hero-title{
     font-family:"Fraunces",Georgia,serif;font-weight:400;
-    font-size:clamp(2.9rem,7vw,6.6rem);line-height:.98;letter-spacing:-.025em;
-    max-width:16ch;
+    font-size:clamp(2.5rem,6.2vw,5.6rem);line-height:1.0;letter-spacing:-.025em;
+    max-width:20ch;
   }
   h1.hero-title em{font-style:italic;color:var(--accent)}
   .hero-sub{
-    margin-top:34px;max-width:52ch;font-size:clamp(1.05rem,1.5vw,1.28rem);
+    margin-top:34px;max-width:58ch;font-size:clamp(1.02rem,1.45vw,1.22rem);
     color:var(--ink-soft);line-height:1.55;
   }
+  .hero-sub strong{font-weight:500;color:var(--ink)}
   .hero-actions{margin-top:44px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
   .btn{
     display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:.95rem;
     padding:15px 26px;border-radius:100px;transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s,color .3s,box-shadow .3s;
   }
   .btn-primary{background:var(--ink);color:var(--paper)}
-  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(228,81,58,.6)}
+  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(196,60,44,.6)}
   .btn-ghost{color:var(--ink)}
   .btn-ghost .arw{transition:transform .3s}
   .btn-ghost:hover .arw{transform:translateX(5px)}
-  .btn-ghost:hover{color:var(--accent)}
+  .btn-ghost:hover{color:var(--accent-ui)}
   .scroll-cue{
     position:absolute;left:var(--pad);bottom:30px;z-index:2;display:flex;align-items:center;gap:12px;
     font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);
@@ -169,87 +169,167 @@
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
     padding:22px 0;overflow:hidden;white-space:nowrap;background:var(--paper);
   }
-  .marquee-track{display:inline-flex;gap:0;animation:marq 34s linear infinite;will-change:transform}
+  .marquee-track{display:inline-flex;gap:0;animation:marq 40s linear infinite;will-change:transform}
   .marquee:hover .marquee-track{animation-play-state:paused}
   .marquee span{
-    font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.4rem,3.4vw,2.4rem);
-    color:var(--ink);padding:0 34px;display:inline-flex;align-items:center;gap:34px;
+    font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.3rem,3.1vw,2.2rem);
+    color:var(--ink);padding:0 30px;display:inline-flex;align-items:center;gap:30px;
   }
   .marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
   @keyframes marq{to{transform:translateX(-50%)}}
 
   /* ---------- SECTION SCAFFOLD ---------- */
   section{position:relative}
-  .sec{padding:clamp(80px,12vw,160px) 0}
-  .sec-head{max-width:60ch}
+  .sec{padding:clamp(80px,12vw,150px) 0}
+  .sec-head{max-width:62ch}
   .sec-num{font-size:.74rem;letter-spacing:.24em;color:var(--ink-faint);font-weight:600;margin-bottom:20px;display:block}
   h2{
     font-family:"Fraunces",serif;font-weight:400;letter-spacing:-.02em;
-    font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.02;
+    font-size:clamp(1.9rem,4.4vw,3.5rem);line-height:1.04;
   }
   h2 em{font-style:italic;color:var(--accent)}
-  .lead{margin-top:24px;font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--ink-soft);max-width:56ch}
+  .lead{margin-top:24px;font-size:clamp(1.02rem,1.45vw,1.2rem);color:var(--ink-soft);max-width:58ch}
+  .sec-cta{margin-top:44px;display:inline-flex}
 
   /* ---------- MANIFESTO (night) ---------- */
   .manifesto{background:var(--night);color:var(--paper)}
-  .manifesto .eyebrow{color:var(--night-soft)}
+  .manifesto .eyebrow,.manifesto .sec-num{color:var(--night-soft)}
   .manifesto .big{
     font-family:"Fraunces",serif;font-weight:300;letter-spacing:-.02em;
-    font-size:clamp(1.9rem,4.8vw,4rem);line-height:1.08;max-width:20ch;margin-top:34px;
+    font-size:clamp(1.8rem,4.4vw,3.6rem);line-height:1.08;max-width:22ch;margin-top:20px;
   }
   .manifesto .big em{font-style:italic;color:var(--accent)}
-  .manifesto p.body{margin-top:34px;max-width:54ch;color:var(--night-soft);font-size:clamp(1rem,1.4vw,1.18rem)}
+  .manifesto p.body{margin-top:34px;max-width:56ch;color:var(--night-soft);font-size:clamp(1rem,1.4vw,1.16rem)}
   .manifesto .rule{height:1px;background:rgba(255,255,255,.14);margin:56px 0;width:100%}
   .m-stats{display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,90px)}
   .m-stat .k{font-family:"Fraunces",serif;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1}
-  .m-stat .v{margin-top:10px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--night-soft)}
+  .m-stat .v{margin-top:10px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--night-soft);max-width:26ch}
+  .manifesto .btn-primary{background:var(--paper);color:var(--ink)}
+  .manifesto .btn-primary:hover{background:var(--accent-deep);color:#fff}
 
   /* ---------- PILLARS ---------- */
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,28px);margin-top:64px}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(18px,2vw,28px);margin-top:60px}
   .pillar{
-    border-top:1px solid var(--line);padding-top:28px;position:relative;
+    border-top:1px solid var(--line);padding-top:26px;position:relative;
     transition:transform .5s cubic-bezier(.2,.8,.2,1);
   }
   .pillar:hover{transform:translateY(-6px)}
   .pillar .pn{font-family:"Fraunces",serif;font-size:1rem;color:var(--accent-ui)}
-  .pillar h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.4rem,2.2vw,1.9rem);letter-spacing:-.01em;margin-top:18px;line-height:1.08}
-  .pillar p{margin-top:16px;color:var(--ink-soft);font-size:.98rem}
-  .pillar .ic{margin-top:26px;color:var(--ink)}
-  .pillar .ic svg{width:34px;height:34px}
+  .pillar h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.25rem,1.9vw,1.6rem);letter-spacing:-.01em;margin-top:16px;line-height:1.1}
+  .pillar p{margin-top:14px;color:var(--ink-soft);font-size:.95rem}
 
-  /* ---------- APPROACH ---------- */
-  .approach{background:var(--paper-2)}
-  .two{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,7vw,110px);align-items:start}
-  .principles{margin-top:8px}
-  .principle{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
-  .principle:first-child{border-top:1px solid var(--line)}
-  .principle .idx{font-family:"Fraunces",serif;font-size:.95rem;color:var(--accent-ui);min-width:38px}
-  .principle h4{font-family:"Fraunces",serif;font-weight:500;font-size:1.28rem;letter-spacing:-.01em}
-  .principle p{margin-top:8px;color:var(--ink-soft);font-size:.96rem;max-width:44ch}
-  .approach .stick{position:sticky;top:120px}
-  .tagline{
-    font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.5rem,2.6vw,2.1rem);
-    line-height:1.2;margin-top:30px;
+  /* ---------- MEDIA PLACEHOLDER ---------- */
+  .ph{
+    position:relative;border-radius:14px;overflow:hidden;
+    background:
+      repeating-linear-gradient(45deg,transparent 0 9px,rgba(26,21,18,.035) 9px 18px),
+      var(--paper-3);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;text-align:center;
   }
-  .tagline .accent{font-style:normal}
+  .ph b{
+    font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:600;padding:14px;line-height:1.7;
+  }
+  .ph.wide{aspect-ratio:16/10}
+  .ph.sq{aspect-ratio:1}
+  .ph.tall{aspect-ratio:4/5}
+  .night .ph{
+    border-color:rgba(255,255,255,.14);
+    background:
+      repeating-linear-gradient(45deg,transparent 0 9px,rgba(255,255,255,.035) 9px 18px),
+      rgba(255,255,255,.04);
+  }
+  .night .ph b{color:var(--night-soft)}
+
+  /* ---------- SHOWS / IP CARDS ---------- */
+  .shows{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:clamp(20px,2.4vw,30px);margin-top:56px}
+  .show{display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .show:hover{transform:translateY(-6px)}
+  .show .ph{margin-bottom:20px}
+  .show .tag{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ui);font-weight:600}
+  .show h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.2rem,1.8vw,1.5rem);letter-spacing:-.01em;margin-top:10px;line-height:1.12}
+  .show p{margin-top:12px;color:var(--ink-soft);font-size:.94rem;line-height:1.6}
+  .show .host{margin-top:12px;font-size:.8rem;letter-spacing:.06em;color:var(--ink-faint)}
+
+  /* ---------- LOGO WALL ---------- */
+  .logos{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);
+    margin-top:52px;border-radius:14px;overflow:hidden;
+  }
+  .logo-cell{
+    background:var(--paper);display:flex;align-items:center;justify-content:center;
+    padding:28px 16px;min-height:100px;text-align:center;
+    font-family:"Fraunces",serif;font-size:1rem;color:var(--ink-soft);
+    transition:background .3s,color .3s;
+  }
+  .logo-cell:hover{background:var(--paper-2);color:var(--ink)}
+  .logo-note{margin-top:22px;font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+
+  /* ---------- FILTER CHIPS ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+  .chip{
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    border:1px solid var(--line);border-radius:100px;padding:9px 18px;color:var(--ink-faint);
+  }
+  .chip.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+  /* ---------- TIMELINE ---------- */
+  .tl{margin-top:60px;border-left:1px solid var(--line);padding-left:clamp(26px,4vw,54px)}
+  .tl-item{position:relative;padding-bottom:clamp(38px,6vw,62px)}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;top:8px;
+    left:calc((clamp(26px,4vw,54px) + 5px) * -1);
+    width:9px;height:9px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 5px var(--paper);
+  }
+  .tl-yr{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-ui);font-weight:600}
+  .tl-item h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.25rem,2.1vw,1.75rem);margin-top:10px;letter-spacing:-.01em;line-height:1.1}
+  .tl-item p{margin-top:12px;color:var(--ink-soft);max-width:54ch}
+
+  /* ---------- TEAM ---------- */
+  .founder{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,68px);margin-top:56px;align-items:start}
+  .founder h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.6rem,2.8vw,2.3rem);letter-spacing:-.015em;line-height:1.08}
+  .founder .role{margin-top:12px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ui);font-weight:600}
+  .founder p{margin-top:20px;color:var(--ink-soft);max-width:56ch}
+  .leads{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(20px,2.4vw,30px);margin-top:clamp(50px,7vw,80px)}
+  .lead-card{border-top:1px solid var(--line);padding-top:24px}
+  .lead-card .ph{margin-bottom:22px}
+  .lead-card h4{font-family:"Fraunces",serif;font-weight:500;font-size:1.25rem;letter-spacing:-.01em}
+  .lead-card .role{margin-top:8px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+
+  /* ---------- COLLAGE ---------- */
+  .collage{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:56px}
+
+  /* ---------- SOCIAL ---------- */
+  .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:52px}
+  .social-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .social-links a{
+    display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);
+    border-radius:100px;padding:12px 24px;font-size:.9rem;font-weight:500;
+    transition:background .3s,color .3s,border-color .3s;
+  }
+  .social-links a:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 
   /* ---------- BANNER QUOTE ---------- */
-  .banner{padding:clamp(90px,14vw,180px) 0;text-align:center}
+  .banner{padding:clamp(90px,14vw,170px) 0;text-align:center}
   .banner .q{
     font-family:"Fraunces",serif;font-weight:300;letter-spacing:-.02em;
-    font-size:clamp(2.1rem,6vw,5rem);line-height:1.02;max-width:16ch;margin:0 auto;
+    font-size:clamp(1.9rem,5.2vw,4.2rem);line-height:1.06;max-width:20ch;margin:0 auto;
   }
   .banner .q em{font-style:italic;color:var(--accent)}
-  .banner .sub{margin-top:28px;color:var(--ink-soft);letter-spacing:.04em}
+  .banner .sub{margin-top:28px;color:var(--ink-soft);letter-spacing:.04em;max-width:52ch;margin-left:auto;margin-right:auto}
 
-  /* ---------- CAREERS / CTA ---------- */
+  /* ---------- CTA ---------- */
   .cta{background:var(--night);color:var(--paper);border-radius:clamp(20px,3vw,34px);padding:clamp(46px,7vw,92px);position:relative;overflow:hidden}
   .cta-wrap{padding-bottom:clamp(80px,12vw,140px)}
   .cta .ghost{position:absolute;right:-3%;bottom:-24%;color:rgba(255,255,255,.045);height:130%;pointer-events:none}
-  .cta .inner{position:relative;z-index:2;max-width:30ch}
+  .cta .inner{position:relative;z-index:2;max-width:34ch}
   .cta .eyebrow{color:var(--night-soft)}
   .cta h2{margin-top:22px}
-  .cta p{margin-top:24px;color:var(--night-soft);max-width:46ch;font-size:1.08rem}
+  .cta p{margin-top:24px;color:var(--night-soft);max-width:48ch;font-size:1.06rem}
   .cta .btn-primary{background:var(--paper);color:var(--ink);margin-top:38px}
   .cta .btn-primary:hover{background:var(--accent-deep);color:#fff}
 
@@ -257,36 +337,38 @@
   footer{padding:72px 0 40px;border-top:1px solid var(--line)}
   .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:56px}
   .foot-brand .mark{height:40px;color:var(--ink)}
-  .foot-brand p{margin-top:22px;max-width:34ch;color:var(--ink-soft);font-size:.95rem}
-  .foot-cols{display:flex;gap:clamp(40px,7vw,96px);flex-wrap:wrap}
+  .foot-brand p{margin-top:22px;max-width:32ch;color:var(--ink-soft);font-size:.95rem}
+  .foot-brand .tag{margin-top:16px;font-family:"Fraunces",serif;font-style:italic;font-size:1.15rem;color:var(--ink)}
+  .foot-cols{display:flex;gap:clamp(36px,6vw,88px);flex-wrap:wrap}
   .foot-col h5{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px}
   .foot-col a{display:block;color:var(--ink-soft);font-size:.95rem;padding:6px 0;transition:color .25s}
-  .foot-col a:hover{color:var(--accent)}
+  .foot-col a:hover{color:var(--accent-ui)}
   .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:30px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:.82rem}
 
   /* ---------- ESSAY ---------- */
-  .essay{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);margin-top:60px}
-  .essay p{color:var(--ink-soft);font-size:clamp(1.02rem,1.3vw,1.15rem);margin-bottom:22px;line-height:1.62}
+  .essay{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);margin-top:56px}
+  .essay p{color:var(--ink-soft);font-size:clamp(1.01rem,1.28vw,1.13rem);margin-bottom:22px;line-height:1.62}
   .essay p.first{color:var(--ink)}
+  .essay p em{font-style:italic;color:var(--ink);font-family:"Fraunces",serif;font-size:1.06em}
   .dropcap::first-letter{font-family:"Fraunces",serif;font-size:3.6em;line-height:.72;float:left;padding:10px 14px 0 0;color:var(--accent);font-weight:500}
   .kicker-facts{display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px);margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
-  .kf .k{font-family:"Fraunces",serif;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.05;max-width:16ch}
-  .kf .v{margin-top:12px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+  .kf .k{font-family:"Fraunces",serif;font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1.05}
+  .kf .v{margin-top:10px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);max-width:22ch}
 
-  /* ---------- BELIEFS ---------- */
+  /* ---------- CAPABILITY LIST ---------- */
   .beliefs{background:var(--paper-2)}
-  .belief-list{margin-top:60px;border-top:1px solid var(--line)}
-  .belief{display:grid;grid-template-columns:70px 1fr;gap:22px;padding:34px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding-left .4s ease}
+  .belief-list{margin-top:56px;border-top:1px solid var(--line)}
+  .belief{display:grid;grid-template-columns:70px 1fr;gap:22px;padding:32px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding-left .4s ease}
   .belief:hover{padding-left:10px}
   .belief .bn{font-family:"Fraunces",serif;color:var(--accent-ui);font-size:1.1rem}
-  .belief .bt{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.35rem,2.5vw,2rem);letter-spacing:-.01em;line-height:1.12}
-  .belief .bd{color:var(--ink-soft);margin-top:12px;font-size:1rem;max-width:62ch;line-height:1.6}
+  .belief .bt{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:-.01em;line-height:1.12}
+  .belief .bd{color:var(--ink-soft);margin-top:12px;font-size:1rem;max-width:64ch;line-height:1.6}
   @media(max-width:560px){.belief{grid-template-columns:1fr;gap:8px}}
 
   /* ---------- LETTER ---------- */
-  .letter-sec{padding:clamp(80px,12vw,150px) 0}
+  .letter-sec{padding:clamp(80px,12vw,140px) 0}
   .letter{max-width:66ch;margin:0 auto}
-  .letter p{font-family:"Fraunces",serif;font-size:clamp(1.3rem,2.3vw,1.85rem);line-height:1.4;color:var(--ink);font-weight:300;margin-top:26px;letter-spacing:-.01em}
+  .letter p{font-family:"Fraunces",serif;font-size:clamp(1.25rem,2.1vw,1.7rem);line-height:1.42;color:var(--ink);font-weight:300;margin-top:26px;letter-spacing:-.01em}
   .letter p em{font-style:italic;color:var(--accent)}
   .letter .sign{margin-top:38px;font-size:.86rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase}
 
@@ -296,14 +378,16 @@
   .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
 
   /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1080px){
+    nav.links{gap:18px}
+    nav.links a{font-size:.78rem}
+  }
   @media(max-width:900px){
-    .pillars{grid-template-columns:1fr;gap:8px}
-    .pillar{padding-top:22px;padding-bottom:22px}
-    .two{grid-template-columns:1fr;gap:40px}
-    .approach .stick{position:static}
+    .two,.founder{grid-template-columns:1fr;gap:40px}
     nav.links,.nav-cta{display:none}
     .burger{display:flex}
     .hero-ghost{opacity:.5;right:-30vw}
+    .essay{grid-template-columns:1fr;gap:0}
   }
   @media(max-width:560px){
     .foot-top{flex-direction:column}
@@ -324,17 +408,46 @@
       "@type": "Organization",
       "@id": "https://thehumancompany.media/#org",
       "name": "The Human Company",
-      "alternateName": "The Human Company — A House of Ventures",
       "url": "https://thehumancompany.media/",
       "logo": "https://thehumancompany.media/og.png",
-      "description": "A house of ventures held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen.",
+      "slogan": "From insight to impact.",
+      "description": "A full-stack digital content and brand solutions company bringing strategy, creative, production, original IPs and distribution under one roof.",
       "email": "hello@thehumancompany.media",
+      "foundingDate": "2014",
+      "founder": { "@id": "https://thehumancompany.media/#karishma" },
       "subOrganization": {
         "@type": "Organization",
+        "@id": "https://thehumancompany.media/#hob",
         "name": "Humans of Bombay",
-        "description": "Storytelling venture of The Human Company.",
+        "foundingDate": "2014",
+        "description": "Storytelling platform founded in 2014; the flagship platform within The Human Company.",
+        "founder": { "@id": "https://thehumancompany.media/#karishma" },
         "parentOrganization": { "@id": "https://thehumancompany.media/#org" }
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://thehumancompany.media/#karishma",
+      "name": "Karishma Mehta",
+      "jobTitle": "Founder & CEO",
+      "worksFor": { "@id": "https://thehumancompany.media/#org" },
+      "description": "Founder & CEO of The Human Company and founder of Humans of Bombay. TEDx speaker, author and Forbes-featured entrepreneur."
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://thehumancompany.media/#ips",
+      "name": "Original IPs",
+      "itemListElement": [
+        { "@type": "CreativeWorkSeries", "position": 1, "name": "4:20 Ki Local", "description": "Vox-pop series capturing Mumbai's realest conversations during the 4:20 PM local rush." },
+        { "@type": "CreativeWorkSeries", "position": 2, "name": "Naam To Suna Hoga", "description": "Mumbai's legacy restaurants told through the people, recipes and generations behind them." },
+        { "@type": "CreativeWorkSeries", "position": 3, "name": "Aao Chalein", "description": "A day in someone else's life, seen through their eyes." },
+        { "@type": "CreativeWorkSeries", "position": 4, "name": "Tumhari Meri Baatein", "description": "Two people. One bench. Relationships unfolding through conversation." },
+        { "@type": "CreativeWorkSeries", "position": 5, "name": "Take Me Home", "description": "A stranger invites us into their home and the story of how they made it theirs." },
+        { "@type": "CreativeWorkSeries", "position": 6, "name": "Like An Athlete", "description": "A day with athletes beyond the scoreboard.", "author": { "@type": "Person", "name": "Jatin Sapru" } },
+        { "@type": "CreativeWorkSeries", "position": 7, "name": "All India Mehfil", "description": "A celebration of music and musicians through intimate mehfils and conversations." },
+        { "@type": "CreativeWorkSeries", "position": 8, "name": "The Unrushed", "description": "Deep, thoughtful conversations that aren't trying to get anywhere quickly.", "author": { "@type": "Person", "name": "Jasleen Kaur Gupta" } },
+        { "@type": "CreativeWorkSeries", "position": 9, "name": "The Humans of Bombay Show", "description": "The flagship show bringing powerful personalities and untold stories into one conversation.", "author": { "@id": "https://thehumancompany.media/#karishma" } }
+      ]
     },
     {
       "@type": "WebSite",
@@ -356,7 +469,7 @@
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="The Human Company home">
       <span class="mark" aria-hidden="true">
-        <svg viewBox="0 0 120 140" role="img">
+        <svg viewBox="0 0 120 140">
           <defs>
             <mask id="hc-heart-nav">
               <rect width="120" height="140" fill="#fff"/>
@@ -373,9 +486,11 @@
     </a>
     <nav class="links" aria-label="Primary">
       <a href="#company">The Company</a>
-      <a href="#philosophy">Philosophy</a>
-      <a href="#build">What We Build</a>
-      <a href="#approach">Approach</a>
+      <a href="#what-we-do">What We Do</a>
+      <a href="#ips">Original IPs</a>
+      <a href="#work">Our Work</a>
+      <a href="#impact">Impact</a>
+      <a href="#team">The Team</a>
     </nav>
     <a class="nav-cta" href="#contact">Get in touch</a>
     <button class="burger" aria-label="Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
@@ -386,7 +501,7 @@
 
 <a id="top"></a>
 
-<!-- ================= HERO ================= -->
+<!-- ================= 01 HERO ================= -->
 <main id="main">
 <section class="hero">
   <span class="mark hero-ghost beat" aria-hidden="true">
@@ -406,13 +521,13 @@
   <div class="wrap">
     <div class="hero-eyebrow reveal">
       <span class="dot"></span>
-      <span class="eyebrow">The Human Company — A House of Ventures</span>
+      <span class="eyebrow">The Human Company — From Insight to Impact</span>
     </div>
-    <h1 class="hero-title reveal d1">Everything we build begins with a <em>human.</em></h1>
-    <p class="hero-sub reveal d2">We are a company of companies, held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen.</p>
+    <h1 class="hero-title reveal d1">We know people. We know culture. We know how ideas <em>travel.</em></h1>
+    <p class="hero-sub reveal d2">For 12 years, we've been telling stories that people stop for, share and remember. Today that understanding has grown into something much bigger — <strong>a full-stack digital content and brand solutions company</strong> bringing strategy, creative, production, original IPs and distribution under one roof.</p>
     <div class="hero-actions reveal d3">
-      <a class="btn btn-primary" href="#philosophy">Our philosophy</a>
-      <a class="btn btn-ghost" href="#build">What we build <span class="arw">→</span></a>
+      <a class="btn btn-primary" href="#company">Explore The Human Company</a>
+      <a class="btn btn-ghost" href="#ips">Our original IPs <span class="arw">→</span></a>
     </div>
   </div>
   <div class="scroll-cue" aria-hidden="true"><span class="bar"></span> Scroll</div>
@@ -421,196 +536,403 @@
 <!-- ================= MARQUEE ================= -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Stories</span><span>People</span><span>Craft</span><span>Empathy</span><span>Technology</span><span>Belonging</span>
-    <span>Stories</span><span>People</span><span>Craft</span><span>Empathy</span><span>Technology</span><span>Belonging</span>
+    <span>Strategy</span><span>Creative</span><span>Production</span><span>Original IPs</span><span>Distribution</span>
+    <span>Strategy</span><span>Creative</span><span>Production</span><span>Original IPs</span><span>Distribution</span>
   </div>
 </div>
 
-<!-- ================= COMPANY ================= -->
+<!-- ================= 01 THE EVOLUTION ================= -->
 <section class="sec" id="company">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num reveal">01 — The Company</span>
-      <h2 class="reveal d1">Most companies are built around a product. We build ours around <em>a person.</em></h2>
-      <p class="lead reveal d2">The Human Company is a parent to ventures that reach people at scale without ever treating them as a number. Different products, different audiences, one throughline — put the human at the centre and let everything else follow.</p>
+      <span class="sec-num reveal">01 — The Evolution</span>
+      <h2 class="reveal d1">It started with <em>a story.</em></h2>
+      <p class="lead reveal d2">In 2014, Humans of Bombay began with a simple belief: stories can change the way people see the world. Twelve years later, that belief has become a company.</p>
     </div>
 
     <div class="essay">
       <div class="reveal">
-        <p class="first dropcap">The word "human" gets used a lot, and meant very rarely. It has become the thing brands say when they want the warmth of the idea without the work of it. We started this company because we were tired of that gap — the distance between how companies talk about people and how they actually treat them. We wanted to close it, not decorate it.</p>
-        <p>So we built a house rather than a single product. Under one roof sit ventures that look nothing alike on the surface: some tell stories, some build tools, some gather communities. What they share is a discipline. Each one has to earn a person's trust the slow, honest way — by being genuinely useful, genuinely well-made, and genuinely on their side.</p>
+        <p class="first dropcap">Over the next 12 years, we told more than 7,000 stories — stories of ambition, love, loss, resilience, failure, success and everything in between. Along the way, those stories built a community of over 7 million people and gave us something far more valuable than reach: an understanding of people.</p>
+        <p>We learned what makes people stop. What makes them feel. What makes them share. What makes an idea stay with them.</p>
       </div>
       <div class="reveal d1">
-        <p>We are not interested in attention for its own sake. Attention is cheap; you can buy it by the thousand. Meaning is the hard part — the reason someone comes back, tells a friend, feels a little less alone. That is the only metric that has ever mattered to us, and every venture we back is measured against it before anything else.</p>
-        <p>This site keeps the specifics abstract on purpose. Ventures come and go, scale and pivot, are born and outgrow us. The belief underneath them does not move. If you understand the belief, you understand the company — and everything we will ever make.</p>
+        <p>And then brands started coming to us. What began as a storytelling platform evolved into a business helping brands create stories, build communities, develop original IPs and reach audiences at scale.</p>
+        <p><em>Today, that business has a name: The Human Company.</em></p>
+        <a class="btn btn-ghost sec-cta" href="#journey" style="padding-left:0">Our journey <span class="arw">→</span></a>
       </div>
     </div>
 
     <div class="kicker-facts">
-      <div class="kf reveal"><div class="k">A house of ventures</div><div class="v">Not a single product</div></div>
-      <div class="kf reveal d1"><div class="k">Measured by meaning</div><div class="v">Before reach or revenue</div></div>
-      <div class="kf reveal d2"><div class="k">People at the centre</div><div class="v">Every decision, every venture</div></div>
+      <div class="kf reveal"><div class="k">12 years</div><div class="v">Of understanding people</div></div>
+      <div class="kf reveal d1"><div class="k">7,000+</div><div class="v">Stories told</div></div>
+      <div class="kf reveal d2"><div class="k">7M+</div><div class="v">Community built</div></div>
     </div>
   </div>
 </section>
 
-<!-- ================= MANIFESTO ================= -->
-<section class="sec manifesto" id="philosophy">
-  <div class="wrap">
-    <span class="eyebrow reveal">02 — Philosophy</span>
-    <p class="big reveal d1">We believe the most advanced technology on earth is <em>a human being</em> — and everything we make should honour that.</p>
-    <p class="body reveal d2">Attention is easy to buy and impossible to keep unless something true is on the other side of it. So we start with the person: what they feel, what they carry, what they'd be proud to be part of. The reach, the numbers, the growth — those are consequences of getting the human right, not the goal.</p>
-    <div class="rule reveal"></div>
-    <div class="m-stats">
-      <div class="m-stat reveal d1"><div class="k">Millions</div><div class="v">Reached, one human at a time</div></div>
-      <div class="m-stat reveal d2"><div class="k">One belief</div><div class="v">People first, always</div></div>
-      <div class="m-stat reveal d3"><div class="k">A house</div><div class="v">Of ventures, not silos</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BUILD / PILLARS ================= -->
-<section class="sec" id="build">
+<!-- ================= 02 WHAT WE DO ================= -->
+<section class="sec beliefs" id="what-we-do">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num reveal">03 — What We Build</span>
-      <h2 class="reveal d1">Three ways of putting people <em>first.</em></h2>
-      <p class="lead reveal d2">Our ventures take different shapes, but each one is an answer to the same question: how do we make a person feel more seen tomorrow than they did today?</p>
+      <span class="sec-num reveal">02 — What We Do</span>
+      <h2 class="reveal d1">From the first idea to the <em>final audience.</em></h2>
+      <p class="lead reveal d2">Strategy, creative, production, media, creators and entertainment no longer live in separate worlds. The strongest ideas move seamlessly between them — so we built a company that does too.</p>
     </div>
-    <div class="pillars">
-      <article class="pillar reveal">
-        <div class="pn">01</div>
-        <h3>Stories that move</h3>
-        <p>Narrative that reaches millions yet lands on one. We tell human stories with the craft they deserve and the reach they've earned.</p>
-        <div class="ic" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5h16v11H8l-4 4z"/></svg>
-        </div>
-      </article>
-      <article class="pillar reveal d1">
-        <div class="pn">02</div>
-        <h3>Products with a pulse</h3>
-        <p>Technology that behaves like it cares. We design tools that feel considered, warm, and quietly on your side.</p>
-        <div class="ic" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>
-        </div>
-      </article>
-      <article class="pillar reveal d2">
-        <div class="pn">03</div>
-        <h3>Communities, not audiences</h3>
-        <p>Places people belong, not crowds people perform for. We build spaces where connection outlasts the scroll.</p>
-        <div class="ic" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M13 20c0-3 2.5-5 5-5"/></svg>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
 
-<!-- ================= BELIEFS ================= -->
-<section class="sec beliefs" id="beliefs">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num reveal">04 — What We Believe</span>
-      <h2 class="reveal d1">Six things we hold to be <em>true.</em></h2>
-      <p class="lead reveal d2">Not a mission statement to be framed and forgotten — a working set of beliefs we actually build against. When a decision is hard, these are what we return to.</p>
-    </div>
     <div class="belief-list">
       <div class="belief reveal">
-        <span class="bn">01</span>
-        <div>
-          <div class="bt">A person is not a metric.</div>
-          <p class="bd">The people on the other side of what we build are not impressions, sessions, or line items. Treat them like the whole human they are, and the numbers take care of themselves.</p>
-        </div>
+        <div class="bn">01</div>
+        <div><div class="bt">Strategy</div><div class="bd">Finding the insight, opportunity or cultural tension worth building around.</div></div>
       </div>
       <div class="belief reveal">
-        <span class="bn">02</span>
-        <div>
-          <div class="bt">Attention is borrowed. Trust is earned.</div>
-          <p class="bd">You can buy a person's attention for a moment. Their trust has to be built slowly, kept carefully, and never spent on something unworthy of it.</p>
-        </div>
+        <div class="bn">02</div>
+        <div><div class="bt">Creative</div><div class="bd">Turning that insight into ideas people actually want to engage with.</div></div>
       </div>
       <div class="belief reveal">
-        <span class="bn">03</span>
-        <div>
-          <div class="bt">Craft is a form of respect.</div>
-          <p class="bd">The care we put into the details is the clearest thing we can say about how much we value the person using them. People can always tell when you did the work.</p>
-        </div>
+        <div class="bn">03</div>
+        <div><div class="bt">Production</div><div class="bd">Bringing those ideas to life across films, social, digital, podcasts, experiences and everything in between.</div></div>
       </div>
       <div class="belief reveal">
-        <span class="bn">04</span>
-        <div>
-          <div class="bt">Scale should carry something true.</div>
-          <p class="bd">Reaching millions is only worth it if what travels is honest. We would rather move one person deeply than reach a thousand and mean nothing.</p>
-        </div>
+        <div class="bn">04</div>
+        <div><div class="bt">Original IPs</div><div class="bd">Creating formats and franchises that can live beyond a single campaign.</div></div>
       </div>
       <div class="belief reveal">
-        <span class="bn">05</span>
-        <div>
-          <div class="bt">Warmth and rigour are not opposites.</div>
-          <p class="bd">The most caring products are also the most carefully engineered. Kindness at scale is a hard technical problem, and we treat it like one.</p>
-        </div>
-      </div>
-      <div class="belief reveal">
-        <span class="bn">06</span>
-        <div>
-          <div class="bt">Build for the long, human game.</div>
-          <p class="bd">Trends expire. Being genuinely useful and genuinely kind does not. We make things designed to still matter when the noise has moved on.</p>
-        </div>
+        <div class="bn">05</div>
+        <div><div class="bt">Distribution</div><div class="bd">Taking ideas to audiences through our own media ecosystem and the wider digital landscape.</div></div>
       </div>
     </div>
+
+    <p class="lead reveal" style="margin-top:44px;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.3rem,2.2vw,1.8rem);color:var(--ink)">One connected ecosystem. From imagination to impact.</p>
   </div>
 </section>
 
-<!-- ================= APPROACH ================= -->
-<section class="sec approach" id="approach">
-  <div class="wrap two">
-    <div class="stick">
-      <span class="sec-num reveal">05 — Approach</span>
-      <h2 class="reveal d1">Human-centered isn't a method. It's the <em>whole point.</em></h2>
-      <p class="lead reveal d2">We hold every venture to the same standard, whether it's a platform for millions or a tool for one. Speed matters. Craft matters more. And nothing ships until it feels human.</p>
-      <p class="tagline reveal d3">Engineered to outrun. <span class="accent">Designed to stay human.</span></p>
-    </div>
-    <div class="principles">
-      <div class="principle reveal">
-        <span class="idx">01</span>
-        <div><h4>Start with the person</h4><p>Before the feature, the funnel, or the format — the human. Everything is designed backwards from how it should make them feel.</p></div>
-      </div>
-      <div class="principle reveal d1">
-        <span class="idx">02</span>
-        <div><h4>Craft is non-negotiable</h4><p>Detail is a form of respect. We sweat the type, the timing, the tone, because people can tell when you did.</p></div>
-      </div>
-      <div class="principle reveal d2">
-        <span class="idx">03</span>
-        <div><h4>Reach with meaning</h4><p>Scale is only worth having if what travels is true. We'd rather move millions than merely reach them.</p></div>
-      </div>
-      <div class="principle reveal d3">
-        <span class="idx">04</span>
-        <div><h4>Build to last</h4><p>Trends fade; being genuinely useful and genuinely kind doesn't. We build for the long, human game.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BANNER QUOTE ================= -->
-<section class="banner">
+<!-- ================= 03 THE HUMAN ADVANTAGE ================= -->
+<section class="sec manifesto night" id="advantage">
   <div class="wrap">
-    <p class="q reveal">Reach millions. <em>Move one.</em></p>
-    <p class="sub reveal d1">That's the whole company, in three words.</p>
+    <span class="sec-num reveal">03 — The Human Advantage</span>
+    <p class="big reveal d1">We didn't learn about people <em>from a deck.</em></p>
+    <p class="body reveal d2">We spent 12 years listening to them. From a local train commuter to a global icon. From first-time founders to India's biggest names. From everyday lives to stories that made national headlines. We've sat across thousands of people and learned what makes them tick.</p>
+
+    <div class="collage" aria-hidden="true">
+      <div class="ph sq reveal"><b>HOB story<br/>collage</b></div>
+      <div class="ph sq reveal d1"><b>Interview<br/>stills</b></div>
+      <div class="ph sq reveal d2"><b>Shoot<br/>BTS</b></div>
+      <div class="ph sq reveal d3"><b>Community<br/>faces</b></div>
+    </div>
+
+    <div class="rule reveal"></div>
+    <div class="m-stats">
+      <div class="m-stat reveal d1"><div class="k">Understanding</div><div class="v">Is where we start</div></div>
+      <div class="m-stat reveal d2"><div class="k">Creativity</div><div class="v">Is how we build</div></div>
+      <div class="m-stat reveal d3"><div class="k">Distribution</div><div class="v">Is how we make it matter</div></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= LETTER ================= -->
-<section class="letter-sec" id="note">
+<!-- ================= 04 ORIGINAL IPs — SHORT FORM ================= -->
+<section class="sec" id="ips">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">04 — Original IPs</span>
+      <h2 class="reveal d1">Stories. Formats. Experiences. <em>IPs.</em></h2>
+      <p class="lead reveal d2">Our work doesn't fit into one format — and that's the point. We build across platforms, audiences and categories, creating content that can live wherever people are.</p>
+    </div>
+
+    <div class="shows">
+      <article class="show reveal">
+        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        <span class="tag">Short-form</span>
+        <h3>4:20 Ki Local</h3>
+        <p>Mumbai's realest conversations, captured during the 4:20 PM local rush. Unfiltered opinions, unexpected answers and the debates that inevitably take over the comments.</p>
+      </article>
+      <article class="show reveal d1">
+        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        <span class="tag">Short-form</span>
+        <h3>Naam To Suna Hoga</h3>
+        <p>A journey through Mumbai's iconic legacy restaurants — told through the people, recipes, stories and generations behind them.</p>
+      </article>
+      <article class="show reveal d2">
+        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        <span class="tag">Short-form</span>
+        <h3>Aao Chalein</h3>
+        <p>A day in someone else's life, seen through their eyes. Just real people, real routines and the small moments that make up a life.</p>
+      </article>
+      <article class="show reveal">
+        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        <span class="tag">Short-form</span>
+        <h3>Tumhari Meri Baatein</h3>
+        <p>Two people. One bench. An epic love story. From couples who've spent decades together to those still figuring it out, relationships unfold through conversation, laughter and silence.</p>
+      </article>
+      <article class="show reveal d1">
+        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        <span class="tag">Short-form</span>
+        <h3>Take Me Home</h3>
+        <p>We ask a stranger one question: "Can you take us home?" What follows is a look inside their space — and the story of how they found it, built it and made it theirs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 LONG FORM ================= -->
+<section class="sec beliefs" id="shows">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">05 — Long-Form</span>
+      <h2 class="reveal d1">Some stories can't be told in <em>60 seconds.</em></h2>
+      <p class="lead reveal d2">Our YouTube channel creates space for people to go deeper — into their craft, their journeys, their worlds and the conversations that rarely happen on a timeline.</p>
+    </div>
+
+    <div class="shows">
+      <article class="show reveal">
+        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        <span class="tag">Long-form</span>
+        <h3>Like An Athlete</h3>
+        <p>A day with athletes beyond the scoreboard — the routines, rituals, discipline and lives behind their careers.</p>
+        <div class="host">Hosted by Jatin Sapru</div>
+      </article>
+      <article class="show reveal d1">
+        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        <span class="tag">Long-form</span>
+        <h3>All India Mehfil</h3>
+        <p>A celebration of music and musicians, bringing together established icons and emerging voices through intimate mehfils and conversations.</p>
+      </article>
+      <article class="show reveal d2">
+        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        <span class="tag">Long-form</span>
+        <h3>The Unrushed</h3>
+        <p>A space for conversations that aren't trying to get anywhere quickly. Deep, thoughtful conversations with people worth listening to.</p>
+        <div class="host">Hosted by Jasleen Kaur Gupta</div>
+      </article>
+      <article class="show reveal">
+        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        <span class="tag">Flagship</span>
+        <h3>The Humans of Bombay Show</h3>
+        <p>Powerful personalities and untold stories brought into one conversation — from culture and business to sport, cinema and life.</p>
+        <div class="host">Hosted by Karishma Mehta</div>
+      </article>
+    </div>
+
+    <p class="lead reveal" style="margin-top:44px;font-family:'Fraunces',serif;font-style:italic;color:var(--ink)">And we're only getting started.</p>
+  </div>
+</section>
+
+<!-- ================= 06 BRANDS ================= -->
+<section class="sec" id="brands">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">06 — Brands</span>
+      <h2 class="reveal d1">Trusted by brands that want to <em>matter.</em></h2>
+      <p class="lead reveal d2">The Human Company works with some of the world's leading organisations to build stories, content and ideas that connect with people.</p>
+    </div>
+
+    <div class="logos reveal">
+      <div class="logo-cell">AWS</div>
+      <div class="logo-cell">Aditya Birla Group</div>
+      <div class="logo-cell">Samsung</div>
+      <div class="logo-cell">Myntra</div>
+      <div class="logo-cell">Flipkart</div>
+      <div class="logo-cell">HUL</div>
+      <div class="logo-cell">HSBC</div>
+      <div class="logo-cell">Pidilite</div>
+      <div class="logo-cell">Sun Pharma</div>
+      <div class="logo-cell">Fractal</div>
+      <div class="logo-cell">Kotak</div>
+      <div class="logo-cell">Zomato</div>
+    </div>
+    <p class="logo-note reveal">And many more.</p>
+
+    <p class="lead reveal" style="margin-top:40px">From a single campaign to an entire content ecosystem, we bring strategy, creative, production and distribution together to help brands move from being seen to being remembered.</p>
+  </div>
+</section>
+
+<!-- ================= 07 OUR WORK ================= -->
+<section class="sec beliefs" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">07 — Our Work</span>
+      <h2 class="reveal d1">Ideas are only as good as <em>what they do.</em></h2>
+      <p class="lead reveal d2">We've built campaigns, content ecosystems and original formats across industries and audiences.</p>
+    </div>
+
+    <div class="chips reveal" aria-hidden="true">
+      <span class="chip on">All</span>
+      <span class="chip">Campaigns</span>
+      <span class="chip">Original IP</span>
+      <span class="chip">Social</span>
+      <span class="chip">Film</span>
+      <span class="chip">Podcasts</span>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pn">01</span>
+        <h3>Brand storytelling</h3>
+        <p>Turning brand messages into stories people actually want to watch.</p>
+      </article>
+      <article class="pillar reveal d1">
+        <span class="pn">02</span>
+        <h3>Original IP</h3>
+        <p>Creating repeatable formats that build audiences beyond a single campaign.</p>
+      </article>
+      <article class="pillar reveal d2">
+        <span class="pn">03</span>
+        <h3>Social-first</h3>
+        <p>Designing for the way people actually consume, share and talk about content.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pn">04</span>
+        <h3>Culture</h3>
+        <p>Finding the moments, conversations and human truths that make brands relevant.</p>
+      </article>
+      <article class="pillar reveal d1">
+        <span class="pn">05</span>
+        <h3>Distribution</h3>
+        <p>Pairing strong ideas with the audiences and platforms that can make them travel.</p>
+      </article>
+    </div>
+
+    <div class="collage" style="margin-top:44px">
+      <div class="ph wide reveal" aria-hidden="true"><b>Case study<br/>card</b></div>
+      <div class="ph wide reveal d1" aria-hidden="true"><b>Case study<br/>card</b></div>
+      <div class="ph wide reveal d2" aria-hidden="true"><b>Case study<br/>card</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 08 IMPACT ================= -->
+<section class="sec manifesto night" id="impact">
+  <div class="wrap">
+    <span class="sec-num reveal">08 — Impact</span>
+    <p class="big reveal d1">When stories move people, they can move <em>more than a screen.</em></p>
+    <p class="body reveal d2">Over the years, Humans of Bombay stories have gone beyond storytelling to create real-world change. We've helped individuals find support, businesses find customers, causes find communities and people find one another.</p>
+    <div class="rule reveal"></div>
+    <div class="m-stats">
+      <div class="m-stat reveal d1"><div class="k">₹20 crore</div><div class="v">Raised for individuals and social causes</div></div>
+      <div class="m-stat reveal d2"><div class="k">7,000+</div><div class="v">Stories across generations and geographies</div></div>
+      <div class="m-stat reveal d3"><div class="k">7M+</div><div class="v">Community built around stories people care about</div></div>
+    </div>
+    <p class="body reveal" style="margin-top:50px">For us, impact has never been just about how many people watched. It's about what happened after they did.</p>
+  </div>
+</section>
+
+<!-- ================= 09 OUR JOURNEY ================= -->
+<section class="sec" id="journey">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">09 — Our Journey</span>
+      <h2 class="reveal d1">12 years. One <em>bigger idea.</em></h2>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="tl-yr">2014</div>
+        <h3>Humans of Bombay</h3>
+        <p>A storytelling platform begins with a simple belief: everyone has a story worth hearing.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-yr">2014 – 2026</div>
+        <h3>The community</h3>
+        <p>7,000+ stories. 7M+ people. Millions of conversations.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-yr">Along the way</div>
+        <h3>The business grows</h3>
+        <p>Brands begin coming to us not just to tell stories, but to understand audiences, create content and build meaningful connections.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-yr">Today</div>
+        <h3>The Human Company</h3>
+        <p>The storytelling platform becomes the foundation for a full-stack business spanning strategy, creative, production, original IPs and distribution.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-yr">Next</div>
+        <h3>The next 12 years</h3>
+        <p>Human insight meets creativity, technology and AI. Building ideas that don't just capture attention — but become part of culture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10 THE TEAM ================= -->
+<section class="sec beliefs" id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">10 — The Team</span>
+      <h2 class="reveal d1">Built by people who <em>know the work.</em></h2>
+    </div>
+
+    <div class="founder">
+      <div class="ph tall reveal" aria-hidden="true"><b>Founder<br/>portrait<br/>4:5</b></div>
+      <div class="reveal d1">
+        <h3>Karishma Mehta</h3>
+        <div class="role">Founder &amp; CEO, The Human Company</div>
+        <p>In 2014, Karishma started Humans of Bombay with a camera, a curiosity about people and a belief in the power of stories. Over the past decade she has built one of India's most influential storytelling platforms, growing a community of more than 7 million people.</p>
+        <p>Under her leadership, Humans of Bombay has helped raise nearly ₹20 crore for individuals and social causes. A TEDx speaker, author and Forbes-featured entrepreneur, she is now building the next chapter through The Human Company.</p>
+        <p><em>Powerful stories don't just inspire. They create change.</em></p>
+        <a class="btn btn-ghost sec-cta" href="#contact" style="padding-left:0">Meet Karishma <span class="arw">→</span></a>
+      </div>
+    </div>
+
+    <div class="leads">
+      <div class="lead-card reveal">
+        <div class="ph sq" aria-hidden="true"><b>Portrait</b></div>
+        <h4>Amit Sobti</h4>
+        <div class="role">Chief Operating Officer</div>
+      </div>
+      <div class="lead-card reveal d1">
+        <div class="ph sq" aria-hidden="true"><b>Portrait</b></div>
+        <h4>Jasleen Kaur Gupta</h4>
+        <div class="role">Chief Creative &amp; Strategy Officer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11 THE FUTURE ================= -->
+<section class="banner" id="future">
+  <div class="wrap">
+    <p class="q reveal">The world is changing. So are the ways <em>we create.</em></p>
+    <p class="sub reveal d1">AI is changing how ideas are made. Platforms are changing how they travel. Audiences are changing what they expect from brands. We see that as an opportunity.</p>
+  </div>
+</section>
+
+<section class="letter-sec">
   <div class="wrap letter">
-    <span class="eyebrow reveal">A note on why we exist</span>
-    <p class="reveal d1">Technology keeps getting better at reaching people and, somehow, worse at seeing them. Feeds grow longer. Attention grows thinner. And the person — the actual, specific, feeling human — quietly disappears into a chart.</p>
-    <p class="reveal d1">We started The Human Company to build in the other direction. To make things where the person is the point, not the product of it. Where <em>being seen</em> is the feature, and everything else is in service of it.</p>
-    <p class="reveal d1">If that sounds like the kind of thing you'd want to build, or be reached by — we'd love to hear from you.</p>
+    <span class="eyebrow reveal">What we're building</span>
+    <p class="reveal d1">The next generation of brands won't need more noise. They'll need better ideas, deeper human understanding and the ability to move at <em>the speed of culture.</em></p>
+    <p class="reveal d1">Human insight × creativity × technology × distribution. All under one roof.</p>
     <div class="sign reveal d2">— The Human Company</div>
   </div>
 </section>
 
-<!-- ================= CTA / CAREERS ================= -->
+<!-- ================= 12 SOCIAL ================= -->
+<section class="sec" id="social">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">12 — Social</span>
+      <h2 class="reveal d1">See what we're <em>building.</em></h2>
+      <p class="lead reveal d2">The Human Company is a living ecosystem of stories, people, ideas and conversations. Follow along for the latest from our brands, shows, IPs and people.</p>
+    </div>
+
+    <div class="social-grid" aria-hidden="true">
+      <div class="ph sq reveal"><b>Recent post</b></div>
+      <div class="ph sq reveal d1"><b>Recent post</b></div>
+      <div class="ph sq reveal d2"><b>Recent post</b></div>
+      <div class="ph sq reveal"><b>Recent post</b></div>
+      <div class="ph sq reveal d1"><b>Recent post</b></div>
+      <div class="ph sq reveal d2"><b>Recent post</b></div>
+    </div>
+
+    <div class="social-links reveal">
+      <a href="#" rel="noopener">Instagram <span aria-hidden="true">→</span></a>
+      <a href="#" rel="noopener">LinkedIn <span aria-hidden="true">→</span></a>
+      <a href="#" rel="noopener">YouTube <span aria-hidden="true">→</span></a>
+      <a href="#" rel="noopener">Humans of Bombay <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
 <section class="cta-wrap" id="contact">
   <div class="wrap">
     <div class="cta reveal">
@@ -629,10 +951,10 @@
         </svg>
       </span>
       <div class="inner">
-        <span class="eyebrow">Come build human things</span>
-        <h2>Let's make something that makes people <em>feel seen.</em></h2>
-        <p>Whether you want to partner, join us, or just start a conversation — we're always listening for people who care about the human on the other side.</p>
-        <a class="btn btn-primary" href="mailto:hello@thehumancompany.media">Say hello →</a>
+        <span class="eyebrow">Get in touch</span>
+        <h2>Have an idea <em>worth building?</em></h2>
+        <p>A brand problem. A story worth telling. A format worth creating. A conversation worth starting. Let's build it.</p>
+        <a class="btn btn-primary" href="mailto:hello@thehumancompany.media">Get in touch →</a>
       </div>
     </div>
   </div>
@@ -659,27 +981,36 @@
             </g>
           </svg>
         </span>
-        <p>A house of ventures built on a single belief: the best things we make are the ones that make people feel seen.</p>
+        <div class="tag">From insight to impact.</div>
+        <p>A full-stack digital content and brand solutions company. Home of Humans of Bombay.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
           <h5>Company</h5>
           <a href="#company">The Company</a>
-          <a href="#philosophy">Philosophy</a>
-          <a href="#build">What We Build</a>
-          <a href="#approach">Approach</a>
+          <a href="#what-we-do">What We Do</a>
+          <a href="#work">Our Work</a>
+          <a href="#ips">Original IPs</a>
+          <a href="#impact">Impact</a>
+          <a href="#team">About Karishma</a>
         </div>
         <div class="foot-col">
           <h5>Connect</h5>
-          <a href="mailto:hello@thehumancompany.media">Email us</a>
-          <a href="#contact">Careers</a>
-          <a href="#contact">Partnerships</a>
+          <a href="#social">Instagram</a>
+          <a href="#social">LinkedIn</a>
+          <a href="#social">YouTube</a>
+          <a href="mailto:hello@thehumancompany.media">Get In Touch</a>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
     <div class="foot-bot">
-      <span>© <span id="yr"></span> The Human Company. Made with care.</span>
-      <span>Human-centered, always.</span>
+      <span>© <span id="yr"></span> The Human Company.</span>
+      <span>From insight to impact.</span>
     </div>
   </div>
 </footer>
@@ -698,6 +1029,19 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // smooth scroll scoped to in-page anchors (keeps INP clean elsewhere)
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href');
+      if(id.length < 2) return;
+      const t = document.querySelector(id);
+      if(!t) return;
+      e.preventDefault();
+      t.scrollIntoView({behavior:'smooth', block:'start'});
+      history.pushState(null,'',id);
+    });
+  });
 </script>
 </body>
 </html>
