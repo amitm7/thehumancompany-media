@@ -8,6 +8,7 @@ description: "Humans of Bombay stories have helped individuals find support, bus
 ctaTitle: "Working on something that <em>needs to be heard?</em>"
 ctaBody: "Some of the work we're proudest of started with someone simply telling us about it. If that's you, get in touch."
 ---
+{% from "media.njk" import slot %}
 
 <section class="page-hero">
   <div class="wrap">
@@ -66,19 +67,19 @@ ctaBody: "Some of the work we're proudest of started with someone simply telling
     </div>
     <div class="shows">
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Impact story<br/>16:10</b></div>
+        {{ slot(media, "impact-1", "wide", "Impact story<br/>16:10") }}
         <span class="tag">Individual</span>
         <h3>Story title</h3>
         <p>Who they are, what changed, and what the community did. Content to be supplied.</p>
       </article>
       <article class="show reveal d1">
-        <div class="ph wide" aria-hidden="true"><b>Impact story<br/>16:10</b></div>
+        {{ slot(media, "impact-2", "wide", "Impact story<br/>16:10") }}
         <span class="tag">Social cause</span>
         <h3>Story title</h3>
         <p>The cause, the campaign, and what it mobilised. Content to be supplied.</p>
       </article>
       <article class="show reveal d2">
-        <div class="ph wide" aria-hidden="true"><b>Impact story<br/>16:10</b></div>
+        {{ slot(media, "impact-3", "wide", "Impact story<br/>16:10") }}
         <span class="tag">Business</span>
         <h3>Story title</h3>
         <p>The business, the story, and the audience it found. Content to be supplied.</p>

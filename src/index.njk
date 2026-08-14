@@ -4,6 +4,7 @@ title: "The Human Company — Full-Stack Digital Content & Brand Solutions"
 ogTitle: "The Human Company — From Insight to Impact"
 description: "The Human Company is a full-stack digital content and brand solutions company — strategy, creative, production, original IPs and distribution under one roof. 12 years, 7,000+ stories, 7M+ community. Parent company of Humans of Bombay."
 ---
+{% from "media.njk" import slot %}
 {% from "mark.njk" import mark %}
 <section class="hero">
   <span class="mark hero-ghost beat" aria-hidden="true">
@@ -105,10 +106,10 @@ description: "The Human Company is a full-stack digital content and brand soluti
     <p class="body reveal d2">We spent 12 years listening to them. From a local train commuter to a global icon. From first-time founders to India's biggest names. From everyday lives to stories that made national headlines. We've sat across thousands of people and learned what makes them tick.</p>
 
     <div class="collage" aria-hidden="true">
-      <div class="ph sq reveal"><b>HOB story<br/>collage</b></div>
-      <div class="ph sq reveal d1"><b>Interview<br/>stills</b></div>
-      <div class="ph sq reveal d2"><b>Shoot<br/>BTS</b></div>
-      <div class="ph sq reveal d3"><b>Community<br/>faces</b></div>
+      {{ slot(media, "collage-1", "sq", "HOB story<br/>collage", "reveal") }}
+      {{ slot(media, "collage-2", "sq", "Interview<br/>stills", "reveal d1") }}
+      {{ slot(media, "collage-3", "sq", "Shoot<br/>BTS", "reveal d2") }}
+      {{ slot(media, "collage-4", "sq", "Community<br/>faces", "reveal d3") }}
     </div>
 
     <div class="rule reveal"></div>
@@ -131,31 +132,31 @@ description: "The Human Company is a full-stack digital content and brand soluti
 
     <div class="shows">
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        {{ slot(media, "ip-420-ki-local", "wide", "Series still<br/>16:10") }}
         <span class="tag">Short-form</span>
         <h3>4:20 Ki Local</h3>
         <p>Mumbai's realest conversations, captured during the 4:20 PM local rush. Unfiltered opinions, unexpected answers and the debates that inevitably take over the comments.</p>
       </article>
       <article class="show reveal d1">
-        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        {{ slot(media, "ip-naam-to-suna-hoga", "wide", "Series still<br/>16:10") }}
         <span class="tag">Short-form</span>
         <h3>Naam To Suna Hoga</h3>
         <p>A journey through Mumbai's iconic legacy restaurants — told through the people, recipes, stories and generations behind them.</p>
       </article>
       <article class="show reveal d2">
-        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        {{ slot(media, "ip-aao-chalein", "wide", "Series still<br/>16:10") }}
         <span class="tag">Short-form</span>
         <h3>Aao Chalein</h3>
         <p>A day in someone else's life, seen through their eyes. Just real people, real routines and the small moments that make up a life.</p>
       </article>
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        {{ slot(media, "ip-tumhari-meri-baatein", "wide", "Series still<br/>16:10") }}
         <span class="tag">Short-form</span>
         <h3>Tumhari Meri Baatein</h3>
         <p>Two people. One bench. An epic love story. From couples who've spent decades together to those still figuring it out, relationships unfold through conversation, laughter and silence.</p>
       </article>
       <article class="show reveal d1">
-        <div class="ph wide" aria-hidden="true"><b>Series still<br/>16:10</b></div>
+        {{ slot(media, "ip-take-me-home", "wide", "Series still<br/>16:10") }}
         <span class="tag">Short-form</span>
         <h3>Take Me Home</h3>
         <p>We ask a stranger one question: "Can you take us home?" What follows is a look inside their space — and the story of how they found it, built it and made it theirs.</p>
@@ -175,27 +176,27 @@ description: "The Human Company is a full-stack digital content and brand soluti
 
     <div class="shows">
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        {{ slot(media, "show-like-an-athlete", "wide", "Show thumbnail<br/>16:10") }}
         <span class="tag">Long-form</span>
         <h3>Like An Athlete</h3>
         <p>A day with athletes beyond the scoreboard — the routines, rituals, discipline and lives behind their careers.</p>
         <div class="host">Hosted by Jatin Sapru</div>
       </article>
       <article class="show reveal d1">
-        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        {{ slot(media, "show-all-india-mehfil", "wide", "Show thumbnail<br/>16:10") }}
         <span class="tag">Long-form</span>
         <h3>All India Mehfil</h3>
         <p>A celebration of music and musicians, bringing together established icons and emerging voices through intimate mehfils and conversations.</p>
       </article>
       <article class="show reveal d2">
-        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        {{ slot(media, "show-the-unrushed", "wide", "Show thumbnail<br/>16:10") }}
         <span class="tag">Long-form</span>
         <h3>The Unrushed</h3>
         <p>A space for conversations that aren't trying to get anywhere quickly. Deep, thoughtful conversations with people worth listening to.</p>
         <div class="host">Hosted by Jasleen Kaur Gupta</div>
       </article>
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Show thumbnail<br/>16:10</b></div>
+        {{ slot(media, "show-hob-show", "wide", "Show thumbnail<br/>16:10") }}
         <span class="tag">Flagship</span>
         <h3>The Humans of Bombay Show</h3>
         <p>Powerful personalities and untold stories brought into one conversation — from culture and business to sport, cinema and life.</p>
@@ -274,9 +275,9 @@ description: "The Human Company is a full-stack digital content and brand soluti
     </div>
 
     <div class="collage" style="margin-top:44px">
-      <div class="ph wide reveal" aria-hidden="true"><b>Case study<br/>card</b></div>
-      <div class="ph wide reveal d1" aria-hidden="true"><b>Case study<br/>card</b></div>
-      <div class="ph wide reveal d2" aria-hidden="true"><b>Case study<br/>card</b></div>
+      {{ slot(media, "case-1", "wide", "Case study<br/>card", "reveal") }}
+      {{ slot(media, "case-2", "wide", "Case study<br/>card", "reveal d1") }}
+      {{ slot(media, "case-3", "wide", "Case study<br/>card", "reveal d2") }}
     </div>
   </div>
 </section>
@@ -357,12 +358,12 @@ description: "The Human Company is a full-stack digital content and brand soluti
 
     <div class="leads">
       <div class="lead-card reveal">
-        <div class="ph sq" aria-hidden="true"><b>Portrait</b></div>
+        {{ slot(media, "team-amit-sobti", "sq", "Portrait") }}
         <h4>Amit Sobti</h4>
         <div class="role">Chief Operating Officer</div>
       </div>
       <div class="lead-card reveal d1">
-        <div class="ph sq" aria-hidden="true"><b>Portrait</b></div>
+        {{ slot(media, "team-jasleen-kaur-gupta", "sq", "Portrait") }}
         <h4>Jasleen Kaur Gupta</h4>
         <div class="role">Chief Creative &amp; Strategy Officer</div>
       </div>
@@ -397,12 +398,12 @@ description: "The Human Company is a full-stack digital content and brand soluti
     </div>
 
     <div class="social-grid" aria-hidden="true">
-      <div class="ph sq reveal"><b>Recent post</b></div>
-      <div class="ph sq reveal d1"><b>Recent post</b></div>
-      <div class="ph sq reveal d2"><b>Recent post</b></div>
-      <div class="ph sq reveal"><b>Recent post</b></div>
-      <div class="ph sq reveal d1"><b>Recent post</b></div>
-      <div class="ph sq reveal d2"><b>Recent post</b></div>
+      {{ slot(media, "social-1", "sq", "Recent post", "reveal") }}
+      {{ slot(media, "social-2", "sq", "Recent post", "reveal d1") }}
+      {{ slot(media, "social-3", "sq", "Recent post", "reveal d2") }}
+      {{ slot(media, "social-4", "sq", "Recent post", "reveal") }}
+      {{ slot(media, "social-5", "sq", "Recent post", "reveal d1") }}
+      {{ slot(media, "social-6", "sq", "Recent post", "reveal d2") }}
     </div>
 
     <div class="social-links reveal">

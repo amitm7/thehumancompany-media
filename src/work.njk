@@ -8,6 +8,7 @@ description: "Campaigns, content ecosystems and original formats built across in
 ctaTitle: "Have a brief <em>worth solving?</em>"
 ctaBody: "Whether it's a single campaign or an entire content ecosystem, tell us the problem and we'll tell you what the idea needs to be."
 ---
+{% from "media.njk" import slot %}
 
 <section class="page-hero">
   <div class="wrap">
@@ -51,37 +52,37 @@ ctaBody: "Whether it's a single campaign or an entire content ecosystem, tell us
 
     <div class="shows">
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        {{ slot(media, "case-1", "wide", "Case study<br/>16:10") }}
         <span class="tag">Campaign</span>
         <h3>Project name</h3>
         <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
       </article>
       <article class="show reveal d1">
-        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        {{ slot(media, "case-2", "wide", "Case study<br/>16:10") }}
         <span class="tag">Original IP</span>
         <h3>Project name</h3>
         <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
       </article>
       <article class="show reveal d2">
-        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        {{ slot(media, "case-3", "wide", "Case study<br/>16:10") }}
         <span class="tag">Social</span>
         <h3>Project name</h3>
         <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
       </article>
       <article class="show reveal">
-        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        {{ slot(media, "case-4", "wide", "Case study<br/>16:10") }}
         <span class="tag">Film</span>
         <h3>Project name</h3>
         <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
       </article>
       <article class="show reveal d1">
-        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        {{ slot(media, "case-5", "wide", "Case study<br/>16:10") }}
         <span class="tag">Podcast</span>
         <h3>Project name</h3>
         <p>Brand · what we did · what it moved. Case study content to be supplied.</p>
       </article>
       <article class="show reveal d2">
-        <div class="ph wide" aria-hidden="true"><b>Case study<br/>16:10</b></div>
+        {{ slot(media, "case-6", "wide", "Case study<br/>16:10") }}
         <span class="tag">Campaign</span>
         <h3>Project name</h3>
         <p>Brand · what we did · what it moved. Case study content to be supplied.</p>

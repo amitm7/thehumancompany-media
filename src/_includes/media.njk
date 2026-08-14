@@ -1,0 +1,16 @@
+{# Renders a real <img> once a file is named in src/_data/media.json,
+   otherwise the hatched placeholder. Dropping an image into
+   src/assets/img/ and naming it in media.json fills the slot — no markup
+   changes, and the box keeps the same aspect ratio either way so nothing
+   reflows when assets land.
+
+   `extra` carries through the scroll-reveal classes (reveal, d1, d2...) so
+   filled slots animate in exactly like the placeholders they replace. #}
+{% macro slot(media, key, shape, label, extra="") %}
+{%- set item = media[key] -%}
+{%- if item and item.file -%}
+<img class="slot {{ shape }} {{ extra }}" src="{{ ('/assets/img/' + item.file) | url }}" alt="{{ item.alt }}" loading="lazy" decoding="async" />
+{%- else -%}
+<div class="ph {{ shape }} {{ extra }}" aria-hidden="true"><b>{{ label | safe }}</b></div>
+{%- endif -%}
+{% endmacro %}

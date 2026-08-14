@@ -8,6 +8,7 @@ description: "Humans of Bombay began in 2014 with a simple belief: every person 
 ctaTitle: "Have a story <em>worth telling?</em>"
 ctaBody: "Humans of Bombay has always been built on people reaching out. If there's a story you think should be heard, tell us."
 ---
+{% from "media.njk" import slot %}
 
 <section class="page-hero">
   <div class="wrap">
@@ -93,10 +94,10 @@ ctaBody: "Humans of Bombay has always been built on people reaching out. If ther
       <p class="lead reveal d2">The platform runs original short-form and long-form formats alongside the stories it was built on.</p>
     </div>
     <div class="collage">
-      <div class="ph sq reveal" aria-hidden="true"><b>Story post</b></div>
-      <div class="ph sq reveal d1" aria-hidden="true"><b>Show still</b></div>
-      <div class="ph sq reveal d2" aria-hidden="true"><b>Interview</b></div>
-      <div class="ph sq reveal" aria-hidden="true"><b>Community</b></div>
+      {{ slot(media, "collage-5", "sq", "Story post", "reveal") }}
+      {{ slot(media, "collage-6", "sq", "Show still", "reveal d1") }}
+      {{ slot(media, "collage-7", "sq", "Interview", "reveal d2") }}
+      {{ slot(media, "collage-8", "sq", "Community", "reveal") }}
     </div>
     <a class="btn btn-ghost sec-cta" href="{{ "/original-ips/" | url }}" style="padding-left:0">See all original IPs <span class="arw">→</span></a>
   </div>
