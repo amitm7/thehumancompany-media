@@ -1,0 +1,41 @@
+{
+  "siteTitle": "The Human Company",
+  "metaDescription": "The Human Company — a house of ventures built on a single belief: the best products, stories, and technology are the ones that make people feel seen.",
+  "socialImage": null,
+  "navLinks": [
+    {
+      "label": "The Company",
+      "href": "#company"
+    },
+    {
+      "label": "Philosophy",
+      "href": "#philosophy"
+    },
+    {
+      "label": "What We Build",
+      "href": "#build"
+    },
+    {
+      "label": "Approach",
+      "href": "#approach"
+    }
+  ],
+  "navCtaLabel": "Get in touch",
+  "navCtaHref": "#contact",
+  "scrollLabel": "Scroll",
+  "footerCompanyHeading": "Company",
+  "footerConnectHeading": "Connect",
+  "footerEmailLabel": "Email us",
+  "footerConnectLinks": [
+    {
+      "label": "Careers",
+      "href": "#contact"
+    },
+    {
+      "label": "Partnerships",
+      "href": "#contact"
+    }
+  ],
+  "footerCopyrightSuffix": "Made with care.",
+  "footerTagline": "Human-centered, always."
+}

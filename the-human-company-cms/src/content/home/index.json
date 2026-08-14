@@ -1,0 +1,167 @@
+{
+  "heroEyebrow": "The Human Company — A House of Ventures",
+  "heroHeadline": "Everything we build begins with a",
+  "heroHeadlineAccent": "human.",
+  "heroSubtext": "We are a company of companies, held together by a single belief — that the best products, stories, and technology are the ones that make people feel seen.",
+  "heroPrimaryLabel": "Our philosophy",
+  "heroPrimaryHref": "#philosophy",
+  "heroSecondaryLabel": "What we build",
+  "heroSecondaryHref": "#build",
+  "marqueeWords": [
+    "Stories",
+    "People",
+    "Craft",
+    "Empathy",
+    "Technology",
+    "Belonging"
+  ],
+  "companyHeadline": "Most companies are built around a product. We build ours around",
+  "companyHeadlineAccent": "a person.",
+  "companyLead": "The Human Company is a parent to ventures that reach people at scale without ever treating them as a number. Different products, different audiences, one throughline — put the human at the centre and let everything else follow.",
+  "companyEssay": [
+    "The word \"human\" gets used a lot, and meant very rarely. It has become the thing brands say when they want the warmth of the idea without the work of it. We started this company because we were tired of that gap — the distance between how companies talk about people and how they actually treat them. We wanted to close it, not decorate it.",
+    "So we built a house rather than a single product. Under one roof sit ventures that look nothing alike on the surface: some tell stories, some build tools, some gather communities. What they share is a discipline. Each one has to earn a person's trust the slow, honest way — by being genuinely useful, genuinely well-made, and genuinely on their side.",
+    "We are not interested in attention for its own sake. Attention is cheap; you can buy it by the thousand. Meaning is the hard part — the reason someone comes back, tells a friend, feels a little less alone. That is the only metric that has ever mattered to us, and every venture we back is measured against it before anything else.",
+    "This site keeps the specifics abstract on purpose. Ventures come and go, scale and pivot, are born and outgrow us. The belief underneath them does not move. If you understand the belief, you understand the company — and everything we will ever make."
+  ],
+  "companyFacts": [
+    {
+      "text": "A house of ventures",
+      "label": "Not a single product"
+    },
+    {
+      "text": "Measured by meaning",
+      "label": "Before reach or revenue"
+    },
+    {
+      "text": "People at the centre",
+      "label": "Every decision, every venture"
+    }
+  ],
+  "philosophyStatement": "We believe the most advanced technology on earth is",
+  "philosophyStatementAccent": "a human being",
+  "philosophyBody": "Attention is easy to buy and impossible to keep unless something true is on the other side of it. So we start with the person: what they feel, what they carry, what they'd be proud to be part of. The reach, the numbers, the growth — those are consequences of getting the human right, not the goal.",
+  "philosophyStats": [
+    {
+      "k": "Millions",
+      "v": "Reached, one human at a time"
+    },
+    {
+      "k": "One belief",
+      "v": "People first, always"
+    },
+    {
+      "k": "A house",
+      "v": "Of ventures, not silos"
+    }
+  ],
+  "buildHeadline": "Three ways of putting people",
+  "buildHeadlineAccent": "first.",
+  "buildLead": "Our ventures take different shapes, but each one is an answer to the same question: how do we make a person feel more seen tomorrow than they did today?",
+  "pillars": [
+    {
+      "number": "01",
+      "title": "Stories that move",
+      "body": "Narrative that reaches millions yet lands on one. We tell human stories with the craft they deserve and the reach they've earned.",
+      "image": null
+    },
+    {
+      "number": "02",
+      "title": "Products with a pulse",
+      "body": "Technology that behaves like it cares. We design tools that feel considered, warm, and quietly on your side.",
+      "image": null
+    },
+    {
+      "number": "03",
+      "title": "Communities, not audiences",
+      "body": "Places people belong, not crowds people perform for. We build spaces where connection outlasts the scroll.",
+      "image": null
+    }
+  ],
+  "beliefsHeadline": "Six things we hold to be",
+  "beliefsHeadlineAccent": "true.",
+  "beliefsLead": "Not a mission statement to be framed and forgotten — a working set of beliefs we actually build against. When a decision is hard, these are what we return to.",
+  "beliefs": [
+    {
+      "number": "01",
+      "title": "A person is not a metric.",
+      "body": "The people on the other side of what we build are not impressions, sessions, or line items. Treat them like the whole human they are, and the numbers take care of themselves."
+    },
+    {
+      "number": "02",
+      "title": "Attention is borrowed. Trust is earned.",
+      "body": "You can buy a person's attention for a moment. Their trust has to be built slowly, kept carefully, and never spent on something unworthy of it."
+    },
+    {
+      "number": "03",
+      "title": "Craft is a form of respect.",
+      "body": "The care we put into the details is the clearest thing we can say about how much we value the person using them. People can always tell when you did the work."
+    },
+    {
+      "number": "04",
+      "title": "Scale should carry something true.",
+      "body": "Reaching millions is only worth it if what travels is honest. We would rather move one person deeply than reach a thousand and mean nothing."
+    },
+    {
+      "number": "05",
+      "title": "Warmth and rigour are not opposites.",
+      "body": "The most caring products are also the most carefully engineered. Kindness at scale is a hard technical problem, and we treat it like one."
+    },
+    {
+      "number": "06",
+      "title": "Build for the long, human game.",
+      "body": "Trends expire. Being genuinely useful and genuinely kind does not. We make things designed to still matter when the noise has moved on."
+    }
+  ],
+  "approachHeadline": "Human-centered isn't a method. It's the",
+  "approachHeadlineAccent": "whole point.",
+  "approachLead": "We hold every venture to the same standard, whether it's a platform for millions or a tool for one. Speed matters. Craft matters more. And nothing ships until it feels human.",
+  "approachTagline": "Engineered to outrun.",
+  "approachTaglineAccent": "Designed to stay human.",
+  "principles": [
+    {
+      "idx": "01",
+      "title": "Start with the person",
+      "body": "Before the feature, the funnel, or the format — the human. Everything is designed backwards from how it should make them feel."
+    },
+    {
+      "idx": "02",
+      "title": "Craft is non-negotiable",
+      "body": "Detail is a form of respect. We sweat the type, the timing, the tone, because people can tell when you did."
+    },
+    {
+      "idx": "03",
+      "title": "Reach with meaning",
+      "body": "Scale is only worth having if what travels is true. We'd rather move millions than merely reach them."
+    },
+    {
+      "idx": "04",
+      "title": "Build to last",
+      "body": "Trends fade; being genuinely useful and genuinely kind doesn't. We build for the long, human game."
+    }
+  ],
+  "bannerText": "Reach millions.",
+  "bannerAccent": "Move one.",
+  "bannerSub": "That's the whole company, in three words.",
+  "letterEyebrow": "A note on why we exist",
+  "letterParagraphs": [
+    "Technology keeps getting better at reaching people and, somehow, worse at seeing them. Feeds grow longer. Attention grows thinner. And the person — the actual, specific, feeling human — quietly disappears into a chart.",
+    "We started The Human Company to build in the other direction. To make things where the person is the point, not the product of it. Where being seen is the feature, and everything else is in service of it.",
+    "If that sounds like the kind of thing you'd want to build, or be reached by — we'd love to hear from you."
+  ],
+  "letterSign": "— The Human Company",
+  "ctaEyebrow": "Come build human things",
+  "ctaHeadline": "Let's make something that makes people",
+  "ctaHeadlineAccent": "feel seen.",
+  "ctaBody": "Whether you want to partner, join us, or just start a conversation — we're always listening for people who care about the human on the other side.",
+  "ctaButtonLabel": "Say hello →",
+  "ctaButtonHref": "mailto:hello@thehumancompany.media",
+  "footerBlurb": "A house of ventures built on a single belief: the best things we make are the ones that make people feel seen.",
+  "footerEmail": "hello@thehumancompany.media",
+  "companyEyebrow": "01 — The Company",
+  "philosophyEyebrow": "02 — Philosophy",
+  "buildEyebrow": "03 — What We Build",
+  "beliefsEyebrow": "04 — What We Believe",
+  "approachEyebrow": "05 — Approach",
+  "philosophyStatementTail": "— and everything we make should honour that."
+}

@@ -1,0 +1,267 @@
+---
+import '../styles/global.css';
+import Mark from '../components/Mark.astro';
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+import seed from '../content/home/index.json';
+import siteSeed from '../content/site/index.json';
+
+// Read content from Keystatic (falls back to the seed files if unavailable).
+let home: any = seed;
+let site: any = siteSeed;
+try {
+  const reader = createReader(process.cwd(), keystaticConfig);
+  const [homeData, siteData] = await Promise.all([
+    reader.singletons.home.read(),
+    reader.singletons.site.read(),
+  ]);
+  if (homeData) home = homeData;
+  if (siteData) site = siteData;
+} catch (e) {
+  home = seed;
+  site = siteSeed;
+}
+
+// split the essay into two balanced columns
+const essay: string[] = home.companyEssay ?? [];
+const mid = Math.ceil(essay.length / 2);
+const essayL = essay.slice(0, mid);
+const essayR = essay.slice(mid);
+
+const pillarIcons = [
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5h16v11H8l-4 4z"/></svg>',
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>',
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M13 20c0-3 2.5-5 5-5"/></svg>',
+];
+const year = new Date().getFullYear();
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={site.metaDescription} />
+  <title>{site.siteTitle}</title>
+  <meta property="og:title" content={site.siteTitle} />
+  <meta property="og:description" content={site.metaDescription} />
+  <meta property="og:type" content="website" />
+  {site.socialImage && <meta property="og:image" content={site.socialImage} />}
+  <meta name="twitter:card" content={site.socialImage ? 'summary_large_image' : 'summary'} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="The Human Company home">
+      <Mark id="nav" />
+      <span class="wordmark">The<br/>Human<br/>Company</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      {site.navLinks.map((l: any) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+    <a class="nav-cta" href={site.navCtaHref}>{site.navCtaLabel}</a>
+    <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <Mark id="hero" beat={true} cls="hero-ghost" />
+  <div class="wrap">
+    <div class="hero-eyebrow reveal"><span class="dot"></span><span class="eyebrow">{home.heroEyebrow}</span></div>
+    <h1 class="hero-title reveal d1">{home.heroHeadline} <em>{home.heroHeadlineAccent}</em></h1>
+    <p class="hero-sub reveal d2">{home.heroSubtext}</p>
+    <div class="hero-actions reveal d3">
+      <a class="btn btn-primary" href={home.heroPrimaryHref}>{home.heroPrimaryLabel}</a>
+      <a class="btn btn-ghost" href={home.heroSecondaryHref}>{home.heroSecondaryLabel} <span class="arw">→</span></a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span class="bar"></span> {site.scrollLabel}</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {[...home.marqueeWords, ...home.marqueeWords].map((w: string) => <span>{w}</span>)}
+  </div>
+</div>
+
+<!-- COMPANY -->
+<section class="sec" id="company">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">{home.companyEyebrow}</span>
+      <h2 class="reveal d1">{home.companyHeadline} <em>{home.companyHeadlineAccent}</em></h2>
+      <p class="lead reveal d2">{home.companyLead}</p>
+    </div>
+    <div class="essay">
+      <div class="reveal">
+        {essayL.map((p: string, i: number) => <p class={i === 0 ? 'first dropcap' : ''}>{p}</p>)}
+      </div>
+      <div class="reveal d1">
+        {essayR.map((p: string) => <p>{p}</p>)}
+      </div>
+    </div>
+    <div class="kicker-facts">
+      {home.companyFacts.map((f: any, i: number) => (
+        <div class={`kf reveal ${i === 1 ? 'd1' : i === 2 ? 'd2' : ''}`}><div class="k">{f.text}</div><div class="v">{f.label}</div></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="sec manifesto" id="philosophy">
+  <div class="wrap">
+    <span class="eyebrow reveal">{home.philosophyEyebrow}</span>
+    <p class="big reveal d1">{home.philosophyStatement} <em>{home.philosophyStatementAccent}</em>{home.philosophyStatementTail ? ` ${home.philosophyStatementTail}` : ''}</p>
+    <p class="body reveal d2">{home.philosophyBody}</p>
+    <div class="rule reveal"></div>
+    <div class="m-stats">
+      {home.philosophyStats.map((s: any, i: number) => (
+        <div class={`m-stat reveal ${i === 1 ? 'd1' : i === 2 ? 'd2' : ''}`}><div class="k">{s.k}</div><div class="v">{s.v}</div></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section class="sec" id="build">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">{home.buildEyebrow}</span>
+      <h2 class="reveal d1">{home.buildHeadline} <em>{home.buildHeadlineAccent}</em></h2>
+      <p class="lead reveal d2">{home.buildLead}</p>
+    </div>
+    <div class="pillars">
+      {home.pillars.map((p: any, i: number) => (
+        <article class={`pillar reveal ${i === 1 ? 'd1' : i === 2 ? 'd2' : ''}`}>
+          <div class="pn">{p.number}</div>
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+          {p.image
+            ? <img class="ic-img" src={p.image} alt="" loading="lazy" />
+            : <div class="ic" set:html={pillarIcons[i % pillarIcons.length]} />}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- BELIEFS -->
+<section class="sec beliefs" id="beliefs">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num reveal">{home.beliefsEyebrow}</span>
+      <h2 class="reveal d1">{home.beliefsHeadline} <em>{home.beliefsHeadlineAccent}</em></h2>
+      <p class="lead reveal d2">{home.beliefsLead}</p>
+    </div>
+    <div class="belief-list">
+      {home.beliefs.map((b: any) => (
+        <div class="belief reveal">
+          <span class="bn">{b.number}</span>
+          <div><div class="bt">{b.title}</div><p class="bd">{b.body}</p></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="sec approach" id="approach">
+  <div class="wrap two">
+    <div class="stick">
+      <span class="sec-num reveal">{home.approachEyebrow}</span>
+      <h2 class="reveal d1">{home.approachHeadline} <em>{home.approachHeadlineAccent}</em></h2>
+      <p class="lead reveal d2">{home.approachLead}</p>
+      <p class="tagline reveal d3">{home.approachTagline} <span class="accent">{home.approachTaglineAccent}</span></p>
+    </div>
+    <div class="principles">
+      {home.principles.map((pr: any, i: number) => (
+        <div class={`principle reveal ${i ? 'd' + Math.min(i, 3) : ''}`}>
+          <span class="idx">{pr.idx}</span>
+          <div><h4>{pr.title}</h4><p>{pr.body}</p></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<section class="banner">
+  <div class="wrap">
+    <p class="q reveal">{home.bannerText} <em>{home.bannerAccent}</em></p>
+    <p class="sub reveal d1">{home.bannerSub}</p>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section class="letter-sec" id="note">
+  <div class="wrap letter">
+    <span class="eyebrow reveal">{home.letterEyebrow}</span>
+    {home.letterParagraphs.map((p: string) => <p class="reveal d1">{p}</p>)}
+    <div class="sign reveal d2">{home.letterSign}</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap" id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <Mark id="cta" beat={true} cls="ghost" />
+      <div class="inner">
+        <span class="eyebrow">{home.ctaEyebrow}</span>
+        <h2>{home.ctaHeadline} <em>{home.ctaHeadlineAccent}</em></h2>
+        <p>{home.ctaBody}</p>
+        <a class="btn btn-primary" href={home.ctaButtonHref}>{home.ctaButtonLabel}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <Mark id="foot" />
+        <p>{home.footerBlurb}</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>{site.footerCompanyHeading}</h5>
+          {site.navLinks.map((l: any) => <a href={l.href}>{l.label}</a>)}
+        </div>
+        <div class="foot-col">
+          <h5>{site.footerConnectHeading}</h5>
+          <a href={`mailto:${home.footerEmail}`}>{site.footerEmailLabel}</a>
+          {site.footerConnectLinks.map((l: any) => <a href={l.href}>{l.label}</a>)}
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© {year} {site.siteTitle}. {site.footerCopyrightSuffix}</span>
+      <span>{site.footerTagline}</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav && nav.classList.toggle('solid', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  const burger = document.getElementById('burger');
+  const links = document.querySelector('nav.links');
+  burger && burger.addEventListener('click', () => links && links.classList.toggle('open'));
+</script>
+</body>
+</html>

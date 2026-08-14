@@ -1,0 +1,19 @@
+---
+// The HH heart mark. `id` must be unique per instance (SVG mask ids).
+// `beat` toggles the heartbeat animation.
+const { id = 'm', beat = false, cls = '' } = Astro.props;
+---
+<span class={`mark ${beat ? 'beat' : ''} ${cls}`} aria-hidden="true">
+  <svg viewBox="0 0 120 140" role="img">
+    <defs>
+      <mask id={`hc-heart-${id}`}>
+        <rect width="120" height="140" fill="#fff" />
+        <path d="M60 40 C54 31 41 32 41 44 C41 53 53 60 60 66 C67 60 79 53 79 44 C79 32 66 31 60 40 Z" fill="#000" />
+      </mask>
+    </defs>
+    <g mask={`url(#hc-heart-${id})`} fill="currentColor">
+      <rect x="12" y="6" width="44" height="128" rx="22" />
+      <rect x="64" y="6" width="44" height="128" rx="22" />
+    </g>
+  </svg>
+</span>
